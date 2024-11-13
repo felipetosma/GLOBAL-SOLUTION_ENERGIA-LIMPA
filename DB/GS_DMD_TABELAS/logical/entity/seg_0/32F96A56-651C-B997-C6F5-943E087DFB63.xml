@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="32F96A56-651C-B997-C6F5-943E087DFB63" name="GS_EL_NOTIFICACOES">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>425966B3-F5F5-8A38-2E77-98E39E708A7E</generatorID>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="NOTIFICACAO_ID" id="15CFA671-3AAC-0D99-9D75-7A35212B67A5">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>7525041A-1A9E-2098-555F-352F43D17D8A</generatorID>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DATA_HORA_NOTIFICACAO" id="33746CD8-9727-6AC5-9A15-E47215227EC6">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>9880A22C-5D03-EBE6-09F8-D98E068101F4</generatorID>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="STATUS_NOTIFICACAO_ID" id="2CCD79CC-1637-8122-9D13-199E3D8DD894">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 14:23:25 UTC</createdTime>
+<generatorID>C6434363-0ABE-E065-FC5E-6720EEFC3B3B</generatorID>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<referedAttribute>ABE9C75C-6E33-C4C1-ACA9-3A43835D2A82</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="OPERADOR_ID" id="7918E911-181B-7AE5-244A-0FA79D8BEB7C">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 14:28:29 UTC</createdTime>
+<generatorID>A934C89F-221F-4D90-E604-664182336EBF</generatorID>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<referedAttribute>6F620DCE-9265-D6C5-AFCF-989F4C9A8DEB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="REATOR_ID" id="ADBF0580-93DD-A9AE-1865-DC99A20B11DF">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 17:20:57 UTC</createdTime>
+<generatorID>25FCBDAC-7C5D-D8B8-5FC4-9D9113B18E32</generatorID>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<referedAttribute>EEF6B513-580D-01C2-08CB-717748CAD379</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<structuredType>47E390DE-0671-C4B1-8428-0F45CBEE18F8</structuredType>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="05235E07-6B37-5646-3F2C-A775117A80D8" name="GS_EL_NOTIFICACOES_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 14:20:48 UTC</createdTime>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>15CFA671-3AAC-0D99-9D75-7A35212B67A5</newElementsIDs>
+<usedAttributes>
+<attributeRef>15CFA671-3AAC-0D99-9D75-7A35212B67A5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

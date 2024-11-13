@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3195F5E7-43AA-E0EA-412D-61509545E890" name="GS_EL_REATORES">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>D38FC0B5-F46A-DDF9-34C8-200D5120DDF1</generatorID>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="REATOR_ID" id="EEF6B513-580D-01C2-08CB-717748CAD379">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>48C90C1A-1272-9CAB-4AA2-2517651DE9EC</generatorID>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<structuredType>47E390DE-0671-C4B1-8428-0F45CBEE18F8</structuredType>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOME_REATOR" id="21EB0700-9FED-9625-437B-C618F9C0523C">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>45456C24-78D6-7D96-D80E-F9CB82022C40</generatorID>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PRESSAO_MAX" id="73D6758F-B958-1375-9264-1EF11066FEF7">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 16:30:08 UTC</createdTime>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TEMPERATURA_MAX" id="1F04B6E0-4E56-6493-6269-B52C75AB520E">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 16:31:06 UTC</createdTime>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="RADIACAO_MAX" id="5954E741-B05B-59E2-6498-305CA1A621BB">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 16:31:23 UTC</createdTime>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TIPO_REATOR_ID" id="13FB2114-CFE1-D0BD-7641-0DD67EEBC57A">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 16:49:24 UTC</createdTime>
+<generatorID>0F50B58D-ED74-F3D1-24CF-998E7C29EAC6</generatorID>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<referedAttribute>7B13018F-E31D-B0CF-AC36-E0279E93492A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LOC_REATOR_ID" id="BD4DE639-AC2A-50BC-0A93-FDFCE221CC34">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 17:04:07 UTC</createdTime>
+<generatorID>5EE8252D-6A38-F675-F921-3AD2C41BBF78</generatorID>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<referedAttribute>C266F7F2-89C5-7CE1-2C59-943D0BADD6CF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4FE952F0-F764-E9BE-C16B-03EB65A28DFE" name="GS_EL_REATORES_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:57:18 UTC</createdTime>
+<ownerDesignName>GS_DMD_TABELAS</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>EEF6B513-580D-01C2-08CB-717748CAD379</newElementsIDs>
+<usedAttributes>
+<attributeRef>EEF6B513-580D-01C2-08CB-717748CAD379</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
