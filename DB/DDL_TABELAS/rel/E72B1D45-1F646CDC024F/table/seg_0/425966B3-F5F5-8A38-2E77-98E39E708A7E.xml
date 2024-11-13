@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="425966B3-F5F5-8A38-2E77-98E39E708A7E" schemaObject="B304F892-F725-D11E-D392-7B12BA167CDD" name="GS_EL_NOTIFICACOES">
+<sourceDDLFile>teste.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+<importedID>12F3037F-8EE3-11D5-4866-99BAB096D9D4</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NOTIFICACAO_ID" id="7525041A-1A9E-2098-555F-352F43D17D8A">
+<sourceDDLFile>teste.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+<importedID>F707A6C0-5F34-ED91-8A55-732AE74ED9D5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B2769BCD-B47B-AD63-57E3-60E66260AB6D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="DATA_HORA_NOTIFICACAO" id="9880A22C-5D03-EBE6-09F8-D98E068101F4">
+<sourceDDLFile>teste.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+<importedID>81901177-3EDF-B87F-69ED-07CBC65EB133</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>7E0FB29A-E59F-3A7A-424E-BD9F510C9357</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OPERADOR_ID" id="79C5D51D-913D-06AA-8CA6-969199A2F217">
+<sourceDDLFile>teste.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+<importedID>194124F3-C221-6996-BC1A-159AB2C30A19</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B2769BCD-B47B-AD63-57E3-60E66260AB6D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ALERTA_ID" id="1C3BC438-6CA4-F2D2-77A2-E5D2B15AA5C2">
+<sourceDDLFile>teste.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+<importedID>B407F476-4064-7480-EDFC-0FC6F20522CB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B2769BCD-B47B-AD63-57E3-60E66260AB6D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATUS_NOTIFICACAO_ID" id="F8F664C2-019C-9508-4E77-FC7F238A034A">
+<sourceDDLFile>teste.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+<importedID>3369F34E-BBB1-3C61-9BD0-428B9836D5E3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B2769BCD-B47B-AD63-57E3-60E66260AB6D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

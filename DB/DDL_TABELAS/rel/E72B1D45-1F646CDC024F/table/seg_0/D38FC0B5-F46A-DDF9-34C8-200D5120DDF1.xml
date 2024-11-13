@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D38FC0B5-F46A-DDF9-34C8-200D5120DDF1" schemaObject="B304F892-F725-D11E-D392-7B12BA167CDD" name="GS_EL_REATORES">
+<sourceDDLFile>teste.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+<importedID>A09B61B0-0E87-83A3-DA5C-16AF3A5D2E73</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="REATOR_ID" id="48C90C1A-1272-9CAB-4AA2-2517651DE9EC">
+<sourceDDLFile>teste.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+<importedID>063832D8-DC94-B4E5-87CB-FD269AAF1287</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B2769BCD-B47B-AD63-57E3-60E66260AB6D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="NOME" id="45456C24-78D6-7D96-D80E-F9CB82022C40">
+<sourceDDLFile>teste.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+<importedID>75D9B833-DCC3-0EC7-3BCE-7D6F90953C80</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>966ACE6A-03E3-F6A5-FB75-B9759D0471EA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOCALIZACAO" id="96AF5DA0-A7A9-9752-9917-2EA30514A237">
+<sourceDDLFile>teste.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+<importedID>7D1D341F-78E1-9A2A-0EB3-5E0799E1FCD1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>683582E2-4976-9CAE-952E-CE1F86618C8D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="GS_SOF_PART_DESPEJO_RESIDUO" directorySegmentName="seg_0" id="748A7FB9-8BF2-6648-47E3-EA9FC8E8E245">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+<schemaObject>B304F892-F725-D11E-D392-7B12BA167CDD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>C00B328B-A038-771E-2AFA-75197B004230</segment>
+<tableSpace>89EF769F-9521-79A7-E8CF-4A0EBAC4995B</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_DESPEJO" id="41C7EE38-D818-F862-14DF-0D33629AC432">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="ENTIDADE" id="523856E1-797C-191E-D9D1-97BE5C2CF4B4">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PART_EMISSAO_GLOBAL_PLASTICOS" id="6BD5E23B-7754-6FB1-A6B7-2C33379D65D1">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ANO" id="CA52B06F-615E-3057-F035-67CCB40F1DB5">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:46:45 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev20c>

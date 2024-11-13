@@ -1,0 +1,130 @@
+1. Tabela checklist
+Registra o monitoramento diário dos principais parâmetros críticos.
+
+sql
+Copiar código
+CREATE TABLE checklist (
+    id SERIAL PRIMARY KEY,
+    data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    temperatura_nucleo DECIMAL(5, 2) NOT NULL,
+    pressao_reator DECIMAL(5, 2) NOT NULL,
+    fluxo_refrigerante DECIMAL(5, 2) NOT NULL,
+    nivel_radiacao DECIMAL(5, 2) NOT NULL,
+    observacoes TEXT
+);
+2. Tabela operador
+Armazena dados sobre os operadores da usina.
+
+sql
+Copiar código
+CREATE TABLE operador (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    cpf CHAR(11) UNIQUE NOT NULL,
+    email VARCHAR(100),
+    telefone VARCHAR(15),
+    turno VARCHAR(20),
+    cargo VARCHAR(30)
+);
+3. Tabela alerta
+Registra alertas emitidos pelo sistema e relacionados a condições críticas.
+
+sql
+Copiar código
+CREATE TABLE alerta (
+    id SERIAL PRIMARY KEY,
+    checklist_id INT REFERENCES checklist(id),
+    nivel_alerta VARCHAR(20) NOT NULL, -- (ex.: 'Normal', 'Alerta', 'Crítico')
+    descricao TEXT,
+    data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+4. Tabela equipamento
+Lista os equipamentos da usina com detalhes.
+
+sql
+Copiar código
+CREATE TABLE equipamento (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    tipo VARCHAR(30) NOT NULL, -- (ex.: 'Reator', 'Sistema de Resfriamento', etc.)
+    localizacao VARCHAR(50),
+    status VARCHAR(20) NOT NULL, -- (ex.: 'Operacional', 'Manutenção', 'Desativado')
+    data_instalacao DATE
+);
+5. Tabela inspecao
+Registra as inspeções de segurança realizadas em cada equipamento.
+
+sql
+Copiar código
+CREATE TABLE inspecao (
+    id SERIAL PRIMARY KEY,
+    equipamento_id INT REFERENCES equipamento(id),
+    operador_id INT REFERENCES operador(id),
+    data_inspecao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    resultado TEXT,
+    proxima_inspecao DATE
+);
+6. Tabela manutencao
+Armazena informações sobre manutenções dos equipamentos.
+
+sql
+Copiar código
+CREATE TABLE manutencao (
+    id SERIAL PRIMARY KEY,
+    equipamento_id INT REFERENCES equipamento(id),
+    operador_id INT REFERENCES operador(id),
+    descricao TEXT,
+    data_manutencao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status VARCHAR(20) -- (ex.: 'Concluída', 'Pendente', 'Em Andamento')
+);
+7. Tabela relatorio_diario
+Armazena relatórios diários com resumo das operações e eventos do dia.
+
+sql
+Copiar código
+CREATE TABLE relatorio_diario (
+    id SERIAL PRIMARY KEY,
+    operador_id INT REFERENCES operador(id),
+    data_relatorio DATE DEFAULT CURRENT_DATE,
+    resumo TEXT,
+    conclusoes TEXT
+);
+8. Tabela treinamento
+Registra treinamentos realizados pelos operadores para garantir segurança e conhecimento técnico.
+
+sql
+Copiar código
+CREATE TABLE treinamento (
+    id SERIAL PRIMARY KEY,
+    operador_id INT REFERENCES operador(id),
+    tipo_treinamento VARCHAR(50),
+    data_treinamento DATE,
+    validade DATE,
+    resultado VARCHAR(20) -- (ex.: 'Aprovado', 'Reprovado')
+);
+9. Tabela ocorrencia
+Registra eventos ou incidentes não planejados, como falhas técnicas ou problemas operacionais.
+
+sql
+Copiar código
+CREATE TABLE ocorrencia (
+    id SERIAL PRIMARY KEY,
+    data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    descricao TEXT,
+    nivel_gravidade VARCHAR(20), -- (ex.: 'Baixo', 'Médio', 'Alto')
+    equipamento_id INT REFERENCES equipamento(id),
+    operador_id INT REFERENCES operador(id),
+    status VARCHAR(20) -- (ex.: 'Resolvido', 'Em Análise', 'Pendente')
+);
+10. Tabela turno
+Registra os turnos de cada operador, permitindo análise do horário de trabalho e dos responsáveis em cada turno.
+
+sql
+Copiar código
+CREATE TABLE turno (
+    id SERIAL PRIMARY KEY,
+    operador_id INT REFERENCES operador(id),
+    inicio_turno TIMESTAMP,
+    fim_turno TIMESTAMP,
+    status_turno VARCHAR(20) -- (ex.: 'Ativo', 'Finalizado')
+);
