@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="GS_ENTIDADES_DMD" id="C5216883-6210-7A96-9E6C-A1178A99BB64" version="3.5">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:44:03 UTC</createdTime>
+<ownerDesignName>DDL_TABELAS</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>C5216883-6210-7A96-9E6C-A1178A99BB64</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="89388DB1-8D0E-73D0-F821-EC39E9546752">
+<designStoragePath>F:\teste</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

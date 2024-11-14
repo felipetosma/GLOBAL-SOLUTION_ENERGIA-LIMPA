@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="734C58CC-0442-345E-ED47-FF6A9FFF24FF" name="GS_EL_TURNOS">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>261AC1D7-67ED-10B1-B43F-05E174BD6CB6</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TURNO_ID" id="7103C397-53DB-8671-45D5-B9155E42117E">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>54D66EEA-B18B-034C-005D-B5DA8E24C2BD</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_INICIO" id="6C329C3E-569D-EB93-0DA4-AE6ADD763BE6">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>91E40CAC-1478-88A3-4A11-8BEB3AD170D4</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_FIM" id="ECF45013-1292-C394-C745-3BA902B88395">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>2BE8723A-CA3E-45E9-120F-934A566E63BE</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A968F8A2-6041-7068-C979-962CEEB30BDC" name="GS_EL_TURNOS_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>7A2F3A84-DF95-3487-9A74-03C4562FAA25</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7103C397-53DB-8671-45D5-B9155E42117E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

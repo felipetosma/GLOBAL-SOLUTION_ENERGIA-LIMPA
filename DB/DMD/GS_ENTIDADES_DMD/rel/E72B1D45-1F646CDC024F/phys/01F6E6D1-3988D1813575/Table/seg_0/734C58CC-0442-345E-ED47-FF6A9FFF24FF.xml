@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="GS_EL_TURNOS" directorySegmentName="seg_0" id="734C58CC-0442-345E-ED47-FF6A9FFF24FF">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DATA_INICIO" id="6C329C3E-569D-EB93-0DA4-AE6ADD763BE6">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TURNO_ID" id="7103C397-53DB-8671-45D5-B9155E42117E">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA_FIM" id="ECF45013-1292-C394-C745-3BA902B88395">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="GS_EL_TURNOS_PK" id="A968F8A2-6041-7068-C979-962CEEB30BDC">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

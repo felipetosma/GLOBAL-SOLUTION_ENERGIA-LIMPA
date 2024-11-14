@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="32E82D7A-49A0-0DE3-A9A4-C60096C6FA1F" name="GS_EL_HISTORICO_RELATORIO">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>A75DC4F4-78CF-E0FA-6DB3-AC19D8889FF1</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="HIST_RELATORIO_ID" id="3086B6D7-CD45-7767-18CC-0F5F2C128EAB">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>0D7C366B-7FFC-9B7E-93CD-72BD95E54954</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_HORA_ATUALIZACAO" id="C60BAE79-ED25-D5E4-4842-E90F372CC47A">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>495CCD88-C252-8060-698C-AFA4FF37F927</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OBSERVACOES" id="1664B946-3E0B-128A-7E86-80C6BA056B09">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>34A5ABE0-B21F-3787-9152-1ABFBCEF2971</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RELATORIO_TURNO_ID" id="B96A6CD6-C239-B0E4-0D53-75B2088525D7">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>4EE5DC01-1B7C-FFAE-D6D5-E7F4103B25FF</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A82AEA01-A5FF-7000-5923-2A439DC7A86E" referredColumn="3B2322B9-8643-689C-C1C8-858F00C8F048"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CBEC6446-B4CC-2888-7FF3-224DF3E01C22" name="GS_EL_HISTORICO_RELATORIO_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>7BE5C2E1-706C-9D13-B6A6-2AC0487E7964</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3086B6D7-CD45-7767-18CC-0F5F2C128EAB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4416548D-D5B6-56AC-C110-C1CEC9E0BE26" name="GS_EL_RELATORIOS_TURNO_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>5FC2FAE3-614E-0FFA-291E-19E0DD80755C</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B96A6CD6-C239-B0E4-0D53-75B2088525D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

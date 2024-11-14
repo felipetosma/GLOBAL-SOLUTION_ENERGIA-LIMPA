@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="GS_EL_RELATORIOS_TURNO" directorySegmentName="seg_0" id="A56F78A4-8D35-0FFE-606E-E775832B82BE">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DATA_HORA_RELATORIO" id="1959335E-5B96-8073-2602-86A87A6353C0">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RELATORIO_TURNO_ID" id="3B2322B9-8643-689C-C1C8-858F00C8F048">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OPERADOR_ID" id="5EFEA309-CECA-CBD6-AC3A-3AD9EE88307B">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RESUMO_ATIVIDADES" id="B4DE537E-A70C-ABAC-C98C-0301A4910CC6">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OBSERVACOES" id="B6E15ADF-A310-9EC9-A069-2579D25CB13B">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REATOR_ID" id="EC36D18D-3F36-B9F8-26C4-B6CDCA7DCF15">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="GS_EL_OPERADORES_FKv1" id="A36F86D4-BF04-F054-7CF0-D365E39592E7">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="GS_EL_REATORES_FKv1" id="F295D9FD-0DFF-A667-FD62-DB8E49BA412C">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="GS_EL_RELATORIOS_TURNO_PK" id="11C1F7F6-FAB2-2CA9-D100-48913E428DAD">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

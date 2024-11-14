@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D9514605-0ED0-A518-93F2-72470DB10286" name="GS_EL_STATUS_NOTIFICACAO">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>25578CDA-341A-8CD6-0002-62E6EF2E8339</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="STATUS_NOTIFICACAO_ID" id="041763E0-6965-70F3-6CC8-A5EB35BE8539">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>ABE9C75C-6E33-C4C1-ACA9-3A43835D2A82</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCR_STATUS" id="27E19D97-D3F0-5F1C-B792-D9633DE6B123">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>5F98A920-21CE-320C-472F-1EF6659AB937</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CAABD224-6508-38B5-FC2D-BC34E8A86B1C" name="GS_EL_STATUS_NOTIFICACAO_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>29665E0C-89F7-AAC7-30A3-34F0BA2D2E8E</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="041763E0-6965-70F3-6CC8-A5EB35BE8539"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

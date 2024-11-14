@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="577C6044-4B36-FC3B-AE3D-BBC9A179CC81" name="GS_EL_HISTORICO_NOTIFICACOES">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>C3E6ED29-4D65-6848-92E5-278F200D17AF</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="HIST_NOTIFICACAO_ID" id="5017F7BD-E4F1-9E0F-4644-651C76571159">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>A62E289B-14E3-7821-29C2-063C787ADBAE</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_HORA_ATUALIZACAO_NOTIF" id="1A56574F-DB92-7394-1FD6-4DAA60FF2F99">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>27BB6E6E-9851-F50D-A389-0F74BA2DB7AC</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OBSERVACAO_NOTIFICACAO" id="B86ACD9C-2783-8BAB-09CE-C9DF21B2644F">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>C176A53B-F44C-CA95-A735-6786C1606155</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOTIFICACAO_ID" id="A13344C2-EC6B-ECFB-7005-E2C94836FAE0">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>A537CC61-28E5-FB3F-E054-3C67FFBB5BDA</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="760F5039-317F-3854-3693-54094DB14819" referredColumn="091DFD1A-2C9F-981E-1553-543720503282"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C7C2757F-138D-C039-D692-5631AED530DF" name="GS_EL_HISTORICO_NOTIFICACOES_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>358FD896-3AED-A424-D934-7D83CFA5552C</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5017F7BD-E4F1-9E0F-4644-651C76571159"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D63E524A-274B-9212-9C8E-F0E1B9998F0C" name="GS_EL_HISTORICO_NOTIFICACOES__IDX">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>F34CB519-91C7-587F-AD2A-1E6972CBEC7B</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="A13344C2-EC6B-ECFB-7005-E2C94836FAE0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="31867440-9281-B502-DAB3-43B15778924A" name="GS_EL_NOTIFICACOES_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>F34CB519-91C7-587F-AD2A-1E6972CBEC7B</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A13344C2-EC6B-ECFB-7005-E2C94836FAE0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

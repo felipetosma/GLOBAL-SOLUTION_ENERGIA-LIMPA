@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="261AC1D7-67ED-10B1-B43F-05E174BD6CB6" name="GS_EL_TURNOS">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>0993D79E-DB97-043E-FC78-FCA8F6EBC9C2</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="TURNO_ID" id="54D66EEA-B18B-034C-005D-B5DA8E24C2BD">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>CA43C917-117A-D474-7468-8AFEC0F0D6AC</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DATA_INICIO" id="91E40CAC-1478-88A3-4A11-8BEB3AD170D4">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>DA59D657-B9CE-987E-EECE-3808033422F6</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DATA_FIM" id="2BE8723A-CA3E-45E9-120F-934A566E63BE">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>7009B6C6-1059-A7A8-09A1-A8FD28F279EB</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7A2F3A84-DF95-3487-9A74-03C4562FAA25" name="GS_EL_TURNOS_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 14:14:07 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>54D66EEA-B18B-034C-005D-B5DA8E24C2BD</newElementsIDs>
+<usedAttributes>
+<attributeRef>54D66EEA-B18B-034C-005D-B5DA8E24C2BD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

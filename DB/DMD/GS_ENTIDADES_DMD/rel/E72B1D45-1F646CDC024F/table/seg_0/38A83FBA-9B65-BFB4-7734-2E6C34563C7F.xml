@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="38A83FBA-9B65-BFB4-7734-2E6C34563C7F" name="GS_EL_OPERADORES">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>6FB231A3-EAEA-6906-AEF7-40A77A952AE6</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="OPERADOR_ID" id="057DF8AA-DC39-2AFD-D311-27964B5A4F67">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>6F620DCE-9265-D6C5-AFCF-989F4C9A8DEB</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_OPERADOR" id="D1B22C98-397D-4BB7-6D54-F96937755DF7">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>08B5E8C7-EC6D-07CE-B282-B2E1B7CA48D2</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SENHA_OPERADOR" id="0A6AE017-08B5-2D3D-6AD8-B81095A209ED">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>B1326C06-D3C3-DBCE-76C4-A4FF96141EDE</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CARGO" id="1E6048DB-9D49-90ED-A131-D1233CE7B583">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>E7EDD596-DFDE-3C5A-A94F-E622FC4A7B52</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TURNO_ID" id="724E7AA2-A393-A250-4B00-B96930849EC3">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>C78C4F65-7FD3-E05E-20AE-13766039CA18</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="23F7F959-1724-C178-29F0-E69F6765BF9E" referredColumn="7103C397-53DB-8671-45D5-B9155E42117E"/>
+</associations>
+</Column>
+<Column name="LOR" id="142E1A43-DDB9-46B1-F541-63E8720869C9">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>40E83B4F-8E05-E436-0690-2378955F78D3</generatorID>
+<notes><![CDATA[Licença de Operador de Reator nuclear]]></notes>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F2DF451F-61F7-7719-C8D5-F8C1CEBF944B" name="GS_EL_OPERADORES_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>4D6FDCD8-3545-5635-98B6-DB1B48CA4BDB</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="057DF8AA-DC39-2AFD-D311-27964B5A4F67"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D213C1EB-9824-E697-E281-2E23A71244CE" name="GS_EL_OPERADORES_LOR_UN">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>E69F32E6-940D-83E2-AD64-A0B195203B3F</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="142E1A43-DDB9-46B1-F541-63E8720869C9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="30C393F5-0CBE-9B55-3266-8E8E4A2C7D1B" name="GS_EL_TURNOS_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 21:09:14 UTC</createdTime>
+<generatorID>5A06D1E1-CBB1-0F36-A403-EB83339803FD</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="724E7AA2-A393-A250-4B00-B96930849EC3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="64885396-EA35-C4AD-4D5A-8D7D78F6206A" name="GS_EL_RELATORIOS_TURNO">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>190F59AB-F855-F446-CD5A-EDA7FABCF84C</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="RELATORIO_TURNO_ID" id="BDCC99E4-4238-1C01-4CC1-3704E73F651D">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>78CB7347-9EFD-24E9-360F-48A5829E4A02</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DATA_HORA_RELATORIO" id="497F0A53-FE4B-9D5E-A84A-071A140C6C9C">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>FFB03017-63A7-8EAD-A598-D4D507511372</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="RESUMO_ATIVIDADES" id="D7A1A8CF-BD24-D11E-D7DF-B023CE21185C">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>E037AC9B-E7AE-395E-5A75-4067966272B0</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="OBSERVACOES" id="83894704-AADF-BFF5-F9C8-5B4727851A64">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 13:55:53 UTC</createdTime>
+<generatorID>7EFDC6CF-B40C-B064-2244-F0F173C6ED97</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="OPERADOR_ID" id="100A27F0-A870-F033-1C3C-B81AB7A4F32B">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 14:29:24 UTC</createdTime>
+<generatorID>F8EBA743-F866-7293-FAC6-6D8883829F07</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<referedAttribute>6F620DCE-9265-D6C5-AFCF-989F4C9A8DEB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="REATOR_ID" id="483DEFCD-1D3E-D9CA-685E-E8742381AA63">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-13 17:20:57 UTC</createdTime>
+<generatorID>54C2E83F-EF2B-3B8A-C51B-4D46990716F5</generatorID>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<referedAttribute>EEF6B513-580D-01C2-08CB-717748CAD379</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<structuredType>47E390DE-0671-C4B1-8428-0F45CBEE18F8</structuredType>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F65C2AC6-17A6-8B0C-6396-D2A7819C6A15" name="GS_EL_RELATORIOS_TURNO_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-11-12 14:15:52 UTC</createdTime>
+<ownerDesignName>GS_ENTIDADES_DMD</ownerDesignName>
+<engineerTo>
+<item key="E72B1D45-D5BC-FD76-5AC8-1F646CDC024F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>BDCC99E4-4238-1C01-4CC1-3704E73F651D</newElementsIDs>
+<usedAttributes>
+<attributeRef>BDCC99E4-4238-1C01-4CC1-3704E73F651D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
