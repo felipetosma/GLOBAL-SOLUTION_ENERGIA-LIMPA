@@ -1,41 +1,20 @@
 package com.example.energyx.repository;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.energyx.entity.Notificacoes;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.query.Procedure;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "gs_el_notificacoes")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class NotificacoesRepository {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "notificacao_id")
-    private Long notificacaoId;
-
-    @NotNull(message = "A data e hora da notificação são obrigatórias.")
-    @Column(name = "data_hora_notificacao", nullable = false)
-    private LocalDateTime dataHoraNotificacao;
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "status_notificacao_id", nullable = false, foreignKey = @ForeignKey(name = "gs_el_status_notificacao_fk"))
-    private StatusNotificacaoRepository statusNotificacao;
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "operador_id", nullable = false, foreignKey = @ForeignKey(name = "gs_el_operadores_fk"))
-    private OperadoresRepository operadores;
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "reator_id", nullable = false, foreignKey = @ForeignKey(name = "gs_el_reatores_fkv2"))
-    private ReatoresRepository reatores;
+@Repository
+public interface NotificacoesRepository extends JpaRepository<Notificacoes, Long> {
+    @Procedure(name = "inserir_notificacao")
+    void inserir_notificacao(
+            @Param("v_data_hora_notificacao") LocalDateTime dataHoraNotificacao,
+            @Param("v_status_notificacao_id") Long statusNotificacaoId,
+            @Param("v_operador_id") Long operadorId,
+            @Param("v_reator_id") Long reatorId
+    );
 }
-

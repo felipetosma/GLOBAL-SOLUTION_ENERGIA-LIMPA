@@ -1,46 +1,37 @@
 package com.example.energyx.service;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.energyx.dto.RelatoriosTurnoDTO;
+import com.example.energyx.entity.RelatoriosTurno;
+import com.example.energyx.entity.Operadores;
+import com.example.energyx.entity.Reatores;
+import com.example.energyx.repository.RelatoriosTurnoRepository;
+import com.example.energyx.repository.OperadoresRepository;
+import com.example.energyx.repository.ReatoresRepository;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
-@Entity
-@Table(name = "gs_el_relatorios_turno")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Service
 public class RelatoriosTurnoService {
+    @Autowired
+    private RelatoriosTurnoRepository relatoriosTurnoRepository;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "relatorio_turno_id")
-    private Long relatorioTurnoId;
-
-    @NotNull(message = "A data e hora do relatório são obrigatórias.")
-    @Column(name = "data_hora_relatorio", nullable = false)
-    private Date dataHoraRelatorio;
-
-    @NotBlank(message = "O resumo das atividades é obrigatório.")
-    @Column(name = "resumo_atividades", nullable = false, length = 200)
-    private String resumoAtividades;
-
-    @Column(name = "observacoes", length = 300)
-    private String observacoes;
-
-    @NotNull(message = "O operador é obrigatório.")
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "operador_id", nullable = false, foreignKey = @ForeignKey(name = "gs_el_operadores_fkv1"))
-    private OperadoresService operador;
-
-    @NotNull(message = "O reator é obrigatório.")
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "reator_id", nullable = false, foreignKey = @ForeignKey(name = "gs_el_reatores_fkv1"))
-    private TipoReatorService reator;
+    @Transactional
+    public void insertWithProcedure(RelatoriosTurnoDTO relatoriosTurnoDTO) {
+        try {
+            relatoriosTurnoRepository.inserir_relatorio_turno(
+                    relatoriosTurnoDTO.getDataHoraRelatorio(),
+                    relatoriosTurnoDTO.getResumoAtividades(),
+                    relatoriosTurnoDTO.getObservacoes(),
+                    relatoriosTurnoDTO.getOperadorId(),
+                    relatoriosTurnoDTO.getReatorId()
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao inserir relatório de turno: " + e.getMessage());
+        }
+    }
 }

@@ -1,17 +1,21 @@
 package com.example.energyx.dto;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.hateoas.RepresentationModel;
 
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.Date;
 
-@Data
-@AllArgsConstructor
+@Getter
+@Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class HistoricoNotificacoesDTO {
     private Long histNotificacaoId;
-    private Timestamp dataHoraAtualizacaoNotif;
+    private LocalDateTime  dataHoraAtualizacaoNotif;
     private String observacaoNotificacao;
     private Long notificacaoId;
 }

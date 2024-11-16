@@ -1,44 +1,29 @@
 package com.example.energyx.service;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.energyx.dto.OperadoresDTO;
+import com.example.energyx.repository.OperadoresRepository;
+import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-@Entity
-@Table(name = "gs_el_operadores", uniqueConstraints = {
-        @UniqueConstraint(columnNames = "lor", name = "gs_el_operadores_lor_un")
-})
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Service
 public class OperadoresService {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "operador_id")
-    private Long operadorId;
+    @Autowired
+    private OperadoresRepository operadoresRepository;
 
-    @NotBlank(message = "O nome do operador é obrigatório.")
-    @Column(name = "nome_operador", nullable = false, length = 50)
-    private String nomeOperador;
-
-    @NotBlank(message = "A senha do operador é obrigatória.")
-    @Column(name = "senha_operador", nullable = false, length = 50)
-    private String senhaOperador;
-
-    @NotBlank(message = "O cargo é obrigatório.")
-    @Column(name = "cargo", nullable = false, length = 50)
-    private String cargo;
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "turno_id", nullable = false, foreignKey = @ForeignKey(name = "gs_el_turnos_fk"))
-    private TurnosService turnos;
-
-    @NotBlank(message = "O LOR é obrigatório.")
-    @Column(name = "lor", nullable = false, length = 30)
-    private String lor;
+    @Transactional
+    public void insertWithProcedure(OperadoresDTO operadoresDTO) {
+        try {
+            operadoresRepository.inserir_operador(
+                    operadoresDTO.getNomeOperador(),
+                    operadoresDTO.getSenhaOperador(),
+                    operadoresDTO.getCargo(),
+                    operadoresDTO.getTurnoId(),
+                    operadoresDTO.getLor()
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao inserir operador: " + e.getMessage());
+        }
+    }
 }

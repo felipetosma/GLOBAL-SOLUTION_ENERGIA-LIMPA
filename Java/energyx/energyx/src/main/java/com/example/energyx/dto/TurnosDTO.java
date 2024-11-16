@@ -12,10 +12,8 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TurnosDTO extends RepresentationModel<TurnosDTO> {
-
+public class TurnosDTO {
     private Long turnoId;
     private Date dataInicio;
     private Date dataFim;
-
 }

@@ -8,18 +8,18 @@ import org.springframework.hateoas.RepresentationModel;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.util.Date;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class NiveisOperacionaisDTO extends RepresentationModel<NiveisOperacionaisDTO> {
-
+public class NiveisOperacionaisDTO {
     private Long nivelOperacionalId;
-    private Timestamp dataHoraMedicao;
-    private double pressao;
-    private double temperatura;
-    private BigDecimal radiacao;
-    private Long reatorId;  // Referência ao id da entidade TipoReator
-
+    private Date dataHoraMedicao;
+    private Long pressao;
+    private Long temperatura;
+    private Long radiacao;
+    private Long fluxoRefrigeracao;
+    private Long reatorId;
 }

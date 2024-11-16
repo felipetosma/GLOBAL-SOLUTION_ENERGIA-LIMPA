@@ -1,34 +1,18 @@
 package com.example.energyx.repository;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.energyx.entity.Turnos;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.query.Procedure;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 
-@Entity
-@Table(name = "gs_el_turnos")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class TurnosRepository {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "turno_id")
-    private Long turnoId;
-
-    @NotNull(message = "A data de início é obrigatória.")
-    @Column(name = "data_inicio", nullable = false)
-    @Temporal(TemporalType.DATE)
-    private Date dataInicio;
-
-    @Column(name = "data_fim")
-    @Temporal(TemporalType.DATE)
-    private Date dataFim;
+@Repository
+public interface TurnosRepository extends JpaRepository<Turnos, Long> {
+    @Procedure(name = "inserir_turno")
+    void inserir_turno(
+            @Param("v_data_inicio") Date dataInicio,
+            @Param("v_data_fim") Date dataFim
+    );
 }
-

@@ -1,26 +1,15 @@
 package com.example.energyx.repository;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.energyx.entity.StatusNotificacao;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.query.Procedure;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
-@Entity
-@Table(name = "gs_el_status_notificacao")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class StatusNotificacaoRepository {
-
-    @Id
-    @Column(name = "status_notificacao_id")
-    private Long statusNotificacaoId;
-
-    @Column(name = "descr_status", length = 200)
-    private String descrStatus;
+@Repository
+public interface StatusNotificacaoRepository extends JpaRepository<StatusNotificacao, Long> {
+    @Procedure(name = "inserir_status_notificacao")
+    void inserir_status_notificacao(
+            @Param("v_descr_status") String descrStatus
+    );
 }

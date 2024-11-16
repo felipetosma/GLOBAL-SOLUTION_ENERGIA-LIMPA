@@ -1,30 +1,31 @@
 package com.example.energyx.service;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.energyx.dto.LocalizacaoReatorDTO;
+import com.example.energyx.entity.LocalizacaoReator;
+import com.example.energyx.repository.LocalizacaoReatorRepository;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-@Entity
-@Table(name = "gs_el_localizacao_reator")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
 public class LocalizacaoReatorService {
+    @Autowired
+    private LocalizacaoReatorRepository localizacaoReatorRepository;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "loc_reator_id")
-    private Long locReatorId;
-
-    @Column(name = "setor", length = 50, nullable = false)
-    private String setor;
-
-    @Column(name = "unidade", length = 20, nullable = false)
-    private String unidade;
-
-    @Column(name = "descricao", length = 250)
-    private String descricao;
+    @Transactional
+    public void insertWithProcedure(LocalizacaoReatorDTO localizacaoReatorDTO) {
+        try {
+            localizacaoReatorRepository.inserir_localizacao_reator(
+                    localizacaoReatorDTO.getSetor(),
+                    localizacaoReatorDTO.getUnidade(),
+                    localizacaoReatorDTO.getDescricao()
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao inserir localização do reator: " + e.getMessage());
+        }
+    }
 }

@@ -1,18 +1,27 @@
 package com.example.energyx.controller;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.hateoas.RepresentationModel;
+import com.example.energyx.dto.StatusNotificacaoDTO;
+import com.example.energyx.service.StatusNotificacaoService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import java.util.stream.Collectors;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class StatusNotificacaoController extends RepresentationModel<StatusNotificacaoController> {
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-    private Long statusNotificacaoId;
-    private String descrStatus;
+@RestController
+@RequestMapping("/status-notificacao")
+public class StatusNotificacaoController {
+    @Autowired
+    private StatusNotificacaoService statusNotificacaoService;
 
+    @PostMapping("/withProcedure")
+    public ResponseEntity<String> insertStatusNotificacao(@RequestBody @Valid StatusNotificacaoDTO statusNotificacaoDTO) {
+        statusNotificacaoService.insertWithProcedure(statusNotificacaoDTO);
+        return ResponseEntity.ok("Status de notificação inserido com sucesso.");
+    }
 }

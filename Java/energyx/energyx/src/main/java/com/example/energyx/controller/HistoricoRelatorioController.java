@@ -1,32 +1,28 @@
 package com.example.energyx.controller;
 
-import com.example.energyx.dto.HistoricoNotificacoesDTO;
-import com.example.energyx.service.HistoricoNotificacoesService;
+import com.example.energyx.dto.HistoricoRelatorioDTO;
+import com.example.energyx.service.HistoricoRelatorioService;
 import jakarta.validation.Valid;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.RepresentationModel;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.sql.Timestamp;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @RestController
-@RequestMapping("/historicoNotificacoes")
-public class HistoricoNotificacoesController {
-
+@RequestMapping("/historico-relatorio")
+public class HistoricoRelatorioController {
     @Autowired
-    private HistoricoNotificacoesService historicoNotificacoesService;
+    private HistoricoRelatorioService historicoRelatorioService;
 
-    @PostMapping("/inserir")
-    public ResponseEntity<String> inserirHistoricoNotificacao(@RequestBody @Valid HistoricoNotificacoesDTO historicoDTO) {
-        historicoNotificacoesService.inserirHistoricoNotificacao(HistoricoNotificacoesDTO);
-        return ResponseEntity.ok("Histórico de notificação inserido com sucesso.");
+    @PostMapping("/withProcedure")
+    public ResponseEntity<String> insertHistoricoRelatorio(@RequestBody @Valid HistoricoRelatorioDTO historicoRelatorioDTO) {
+        historicoRelatorioService.insertWithProcedure(historicoRelatorioDTO);
+        return ResponseEntity.ok("Histórico de relatório inserido com sucesso.");
     }
 }

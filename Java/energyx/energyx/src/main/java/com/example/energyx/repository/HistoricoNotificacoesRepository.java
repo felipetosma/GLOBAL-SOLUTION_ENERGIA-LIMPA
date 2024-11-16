@@ -6,15 +6,15 @@ import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Repository
 public interface HistoricoNotificacoesRepository extends JpaRepository<HistoricoNotificacoes, Long> {
-
     @Procedure(name = "inserir_historico_notificacao")
     void inserir_historico_notificacao(
-            @Param("p_data_hora_atualizacao_notif") Timestamp dataHoraAtualizacao,
-            @Param("p_observacao_notificacao") String observacaoNotificacao,
-            @Param("p_notificacao_id") Long notificacaoId
+            @Param("v_data_hora_atualizacao_notif") LocalDateTime dataHoraAtualizacaoNotif,
+            @Param("v_observacao_notificacao") String observacaoNotificacao,
+            @Param("v_notificacao_id") Long notificacaoId
     );
 }

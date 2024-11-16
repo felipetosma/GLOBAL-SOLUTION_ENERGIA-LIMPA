@@ -1,26 +1,29 @@
 package com.example.energyx.service;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.energyx.dto.StatusNotificacaoDTO;
+import com.example.energyx.entity.StatusNotificacao;
+import com.example.energyx.repository.StatusNotificacaoRepository;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-@Entity
-@Table(name = "gs_el_status_notificacao")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
 public class StatusNotificacaoService {
+    @Autowired
+    private StatusNotificacaoRepository statusNotificacaoRepository;
 
-    @Id
-    @Column(name = "status_notificacao_id")
-    private Long statusNotificacaoId;
-
-    @Column(name = "descr_status", length = 200)
-    private String descrStatus;
+    @Transactional
+    public void insertWithProcedure(StatusNotificacaoDTO statusNotificacaoDTO) {
+        try {
+            statusNotificacaoRepository.inserir_status_notificacao(
+                    statusNotificacaoDTO.getDescrStatus()
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao inserir status de notificação: " + e.getMessage());
+        }
+    }
 }

@@ -1,24 +1,27 @@
 package com.example.energyx.controller;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.hateoas.RepresentationModel;
+import com.example.energyx.dto.RelatoriosTurnoDTO;
+import com.example.energyx.service.RelatoriosTurnoService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import java.util.stream.Collectors;
 
-import java.util.Date;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class RelatoriosTurnoController extends RepresentationModel<RelatoriosTurnoController> {
+@RestController
+@RequestMapping("/relatorios-turno")
+public class RelatoriosTurnoController {
+    @Autowired
+    private RelatoriosTurnoService relatoriosTurnoService;
 
-    private Long relatorioTurnoId;
-    private Date dataHoraRelatorio;
-    private String resumoAtividades;
-    private String observacoes;
-    private Long operadorId;  // Referência ao id de Operador
-    private Long reatorId;  // Referência ao id de TipoReator
-
+    @PostMapping("/withProcedure")
+    public ResponseEntity<String> insertRelatorioTurno(@RequestBody @Valid RelatoriosTurnoDTO relatoriosTurnoDTO) {
+        relatoriosTurnoService.insertWithProcedure(relatoriosTurnoDTO);
+        return ResponseEntity.ok("Relatório de turno inserido com sucesso.");
+    }
 }

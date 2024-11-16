@@ -1,34 +1,30 @@
 package com.example.energyx.service;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.energyx.dto.TurnosDTO;
+import com.example.energyx.entity.Turnos;
+import com.example.energyx.repository.TurnosRepository;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
-@Entity
-@Table(name = "gs_el_turnos")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Service
 public class TurnosService {
+    @Autowired
+    private TurnosRepository turnosRepository;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "turno_id")
-    private Long turnoId;
-
-    @NotNull(message = "A data de início é obrigatória.")
-    @Column(name = "data_inicio", nullable = false)
-    @Temporal(TemporalType.DATE)
-    private Date dataInicio;
-
-    @Column(name = "data_fim")
-    @Temporal(TemporalType.DATE)
-    private Date dataFim;
+    @Transactional
+    public void insertWithProcedure(TurnosDTO turnosDTO) {
+        try {
+            turnosRepository.inserir_turno(
+                    turnosDTO.getDataInicio(),
+                    turnosDTO.getDataFim()
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao inserir turno: " + e.getMessage());
+        }
+    }
 }
-

@@ -1,36 +1,20 @@
 package com.example.energyx.repository;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.energyx.entity.HistoricoRelatorio;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.query.Procedure;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.util.Date;
 
-@Entity
-@Table(name = "gs_el_historico_relatorio")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class HistoricoRelatorioRepository {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "hist_relatorio_id")
-    private Long histRelatorioId;
-
-    @NotNull(message = "A data e hora da atualização são obrigatórias.")
-    @Column(name = "data_hora_atualizacao", nullable = false)
-    private Timestamp dataHoraAtualizacao;
-
-    @Column(name = "observacoes", length = 150)
-    private String observacoes;
-
-    @NotNull(message = "O relatório de turno é obrigatório.")
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "relatorio_turno_id", nullable = false, foreignKey = @ForeignKey(name = "gs_el_relatorios_turno_fk"))
-    private RelatoriosTurnoRepository relatorioTurno;
+@Repository
+public interface HistoricoRelatorioRepository extends JpaRepository<HistoricoRelatorio, Long> {
+    @Procedure(name = "inserir_historico_relatorio")
+    void inserir_historico_relatorio(
+            @Param("v_data_hora_atualizacao") LocalDateTime dataHoraAtualizacao,
+            @Param("v_observacoes") String observacoes,
+            @Param("v_relatorio_turno_id") Long relatorioTurnoId
+    );
 }

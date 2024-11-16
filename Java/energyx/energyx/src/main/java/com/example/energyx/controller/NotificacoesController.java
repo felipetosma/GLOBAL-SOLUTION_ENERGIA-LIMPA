@@ -1,23 +1,27 @@
 package com.example.energyx.controller;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.hateoas.RepresentationModel;
+import com.example.energyx.dto.NotificacoesDTO;
+import com.example.energyx.service.NotificacoesService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import java.util.stream.Collectors;
 
-import java.time.LocalDateTime;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class NotificacoesController extends RepresentationModel<NotificacoesController> {
+@RestController
+@RequestMapping("/notificacoes")
+public class NotificacoesController {
+    @Autowired
+    private NotificacoesService notificacoesService;
 
-    private Long notificacaoId;
-    private LocalDateTime dataHoraNotificacao;
-    private Long statusNotificacaoId;  // Referência ao id de StatusNotificacao
-    private Long operadorId;  // Referência ao id de Operadores
-    private Long reatorId;  // Referência ao id de Reatores
-
+    @PostMapping("/withProcedure")
+    public ResponseEntity<String> insertNotificacao(@RequestBody @Valid NotificacoesDTO notificacoesDTO) {
+        notificacoesService.insertWithProcedure(notificacoesDTO);
+        return ResponseEntity.ok("Notificação inserida com sucesso.");
+    }
 }

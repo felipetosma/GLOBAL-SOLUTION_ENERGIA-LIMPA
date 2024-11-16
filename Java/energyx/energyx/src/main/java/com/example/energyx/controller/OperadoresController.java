@@ -1,22 +1,30 @@
 package com.example.energyx.controller;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.hateoas.RepresentationModel;
+import com.example.energyx.dto.OperadoresDTO;
+import com.example.energyx.service.OperadoresService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class OperadoresController extends RepresentationModel<OperadoresController> {
+import java.util.List;
+import java.util.stream.Collectors;
 
-    private Long operadorId;
-    private String nomeOperador;
-    private String senhaOperador;
-    private String cargo;
-    private Long turnoId;  // Referência ao id de Turnos
-    private String lor;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
+
+@RestController
+@RequestMapping("/operadores")
+public class OperadoresController {
+
+    @Autowired
+    private OperadoresService operadoresService;
+
+    @PostMapping("/withProcedure")
+    public ResponseEntity<String> insertOperador(@RequestBody @Valid OperadoresDTO operadoresDTO) {
+        operadoresService.insertWithProcedure(operadoresDTO);
+        return ResponseEntity.ok("Operador inserido com sucesso.");
+    }
 
 }

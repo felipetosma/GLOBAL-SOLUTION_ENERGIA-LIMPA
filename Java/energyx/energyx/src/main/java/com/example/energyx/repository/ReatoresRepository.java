@@ -1,42 +1,21 @@
 package com.example.energyx.repository;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.energyx.entity.Reatores;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.query.Procedure;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
-@Entity
-@Table(name = "gs_el_reatores")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class ReatoresRepository {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "reator_id")
-    private Long reatorId;
-
-    @Column(name = "nome_reator", length = 50, nullable = false)
-    private String nomeReator;
-
-    @Column(name = "pressao_max", nullable = false)
-    private Long pressaoMax;
-
-    @Column(name = "temperatura_max", nullable = false)
-    private Long temperaturaMax;
-
-    @Column(name = "radiacao_max", nullable = false)
-    private Long radiacaoMax;
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "tipo_reator_id", nullable = false, foreignKey = @ForeignKey(name = "gs_el_tipo_reator_fk"))
-    private TipoReatorRepository tipoReator;
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "loc_reator_id", nullable = false, foreignKey = @ForeignKey(name = "gs_el_localizacao_reator_fk"))
-    private LocalizacaoReatorRepository localizacaoReator;
+@Repository
+public interface ReatoresRepository extends JpaRepository<Reatores, Long> {
+    @Procedure(name = "inserir_reator")
+    void inserir_reator(
+            @Param("v_nome_reator") String nomeReator,
+            @Param("v_pressao_max") Long pressaoMax,
+            @Param("v_temperatura_max") Long temperaturaMax,
+            @Param("v_radiacao_max") Long radiacaoMax,
+            @Param("v_fluxo_refrigeracao_max") Long fluxoRefrigeracaoMax,
+            @Param("v_tipo_reator_id") Long tipoReatorId,
+            @Param("v_loc_reator_id") Long locReatorId
+    );
 }
-

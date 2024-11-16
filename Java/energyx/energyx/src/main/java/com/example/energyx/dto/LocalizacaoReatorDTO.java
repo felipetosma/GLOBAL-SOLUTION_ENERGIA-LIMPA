@@ -10,11 +10,9 @@ import org.springframework.hateoas.RepresentationModel;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class LocalizacaoReatorDTO extends RepresentationModel<LocalizacaoReatorDTO> {
-
+public class LocalizacaoReatorDTO {
     private Long locReatorId;
     private String setor;
     private String unidade;
     private String descricao;
-
 }

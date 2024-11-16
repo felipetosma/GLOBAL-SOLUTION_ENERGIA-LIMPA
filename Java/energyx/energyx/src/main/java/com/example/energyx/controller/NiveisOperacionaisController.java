@@ -1,25 +1,27 @@
 package com.example.energyx.controller;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.hateoas.RepresentationModel;
+import com.example.energyx.dto.NiveisOperacionaisDTO;
+import com.example.energyx.service.NiveisOperacionaisService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import java.util.stream.Collectors;
 
-import java.math.BigDecimal;
-import java.sql.Timestamp;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class NiveisOperacionaisController extends RepresentationModel<NiveisOperacionaisController> {
+@RestController
+@RequestMapping("/niveis-operacionais")
+public class NiveisOperacionaisController {
+    @Autowired
+    private NiveisOperacionaisService niveisOperacionaisService;
 
-    private Long nivelOperacionalId;
-    private Timestamp dataHoraMedicao;
-    private double pressao;
-    private double temperatura;
-    private BigDecimal radiacao;
-    private Long reatorId;  // Referência ao id da entidade TipoReator
-
+    @PostMapping("/withProcedure")
+    public ResponseEntity<String> insertNiveisOperacionais(@RequestBody @Valid NiveisOperacionaisDTO niveisOperacionaisDTO) {
+        niveisOperacionaisService.insertWithProcedure(niveisOperacionaisDTO);
+        return ResponseEntity.ok("Níveis operacionais inseridos com sucesso.");
+    }
 }

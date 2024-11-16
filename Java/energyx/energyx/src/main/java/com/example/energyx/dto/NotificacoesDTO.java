@@ -12,12 +12,10 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class NotificacoesDTO extends RepresentationModel<NotificacoesDTO> {
-
+public class NotificacoesDTO {
     private Long notificacaoId;
     private LocalDateTime dataHoraNotificacao;
-    private Long statusNotificacaoId;  // Referência ao id de StatusNotificacao
-    private Long operadorId;  // Referência ao id de Operadores
-    private Long reatorId;  // Referência ao id de Reatores
-
+    private Long statusNotificacaoId;
+    private Long operadorId;
+    private Long reatorId;
 }

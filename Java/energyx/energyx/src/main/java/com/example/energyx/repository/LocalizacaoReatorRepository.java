@@ -1,30 +1,17 @@
 package com.example.energyx.repository;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.energyx.entity.LocalizacaoReator;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.query.Procedure;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
-@Entity
-@Table(name = "gs_el_localizacao_reator")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class LocalizacaoReatorRepository {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "loc_reator_id")
-    private Long locReatorId;
-
-    @Column(name = "setor", length = 50, nullable = false)
-    private String setor;
-
-    @Column(name = "unidade", length = 20, nullable = false)
-    private String unidade;
-
-    @Column(name = "descricao", length = 250)
-    private String descricao;
+@Repository
+public interface LocalizacaoReatorRepository extends JpaRepository<LocalizacaoReator, Long> {
+    @Procedure(name = "inserir_localizacao_reator")
+    void inserir_localizacao_reator(
+            @Param("v_setor") String setor,
+            @Param("v_unidade") String unidade,
+            @Param("v_descricao") String descricao
+    );
 }

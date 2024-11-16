@@ -7,17 +7,16 @@ import lombok.Setter;
 import org.springframework.hateoas.RepresentationModel;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class HistoricoRelatorioDTO extends RepresentationModel<HistoricoRelatorioDTO> {
-
+public class HistoricoRelatorioDTO {
     private Long histRelatorioId;
-    private Timestamp dataHoraAtualizacao;
+    private LocalDateTime dataHoraAtualizacao;
     private String observacoes;
-    private Long relatorioTurnoId;  // Referência ao id da entidade RelatoriosTurno
-
+    private Long relatorioTurnoId;
 }
-

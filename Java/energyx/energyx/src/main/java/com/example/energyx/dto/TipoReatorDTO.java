@@ -10,13 +10,10 @@ import org.springframework.hateoas.RepresentationModel;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TipoReatorDTO extends RepresentationModel<TipoReatorDTO> {
-
+public class TipoReatorDTO {
     private Long tipoReatorId;
     private String descricaoReator;
     private Long capacidadeEnergia;
     private String tecnologia;
     private String fabricante;
-
 }
-

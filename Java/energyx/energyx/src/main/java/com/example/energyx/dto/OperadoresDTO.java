@@ -10,7 +10,7 @@ import org.springframework.hateoas.RepresentationModel;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class OperadoresDTO extends RepresentationModel<OperadoresDTO> {
+public class OperadoresDTO {
 
     private Long operadorId;
     private String nomeOperador;

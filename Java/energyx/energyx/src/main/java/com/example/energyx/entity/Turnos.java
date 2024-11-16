@@ -16,19 +16,14 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Turnos {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "turno_id")
     private Long turnoId;
 
-    @NotNull(message = "A data de início é obrigatória.")
     @Column(name = "data_inicio", nullable = false)
-    @Temporal(TemporalType.DATE)
     private Date dataInicio;
 
     @Column(name = "data_fim")
-    @Temporal(TemporalType.DATE)
     private Date dataFim;
 }
-

@@ -12,13 +12,11 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class RelatoriosTurnoDTO extends RepresentationModel<RelatoriosTurnoDTO> {
-
+public class RelatoriosTurnoDTO {
     private Long relatorioTurnoId;
     private Date dataHoraRelatorio;
     private String resumoAtividades;
     private String observacoes;
-    private Long operadorId;  // Referência ao id de Operador
-    private Long reatorId;  // Referência ao id de TipoReator
-
+    private Long operadorId;
+    private Long reatorId;
 }

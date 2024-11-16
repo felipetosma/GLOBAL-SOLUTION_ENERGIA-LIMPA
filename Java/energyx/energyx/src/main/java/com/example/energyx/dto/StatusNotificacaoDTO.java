@@ -10,9 +10,7 @@ import org.springframework.hateoas.RepresentationModel;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class StatusNotificacaoDTO extends RepresentationModel<StatusNotificacaoDTO> {
-
+public class StatusNotificacaoDTO {
     private Long statusNotificacaoId;
     private String descrStatus;
-
 }

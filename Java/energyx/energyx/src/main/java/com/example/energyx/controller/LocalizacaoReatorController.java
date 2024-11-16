@@ -1,20 +1,28 @@
 package com.example.energyx.controller;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.hateoas.RepresentationModel;
+import com.example.energyx.dto.LocalizacaoReatorDTO;
+import com.example.energyx.service.LocalizacaoReatorService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import java.util.stream.Collectors;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class LocalizacaoReatorController extends RepresentationModel<LocalizacaoReatorController> {
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-    private Long locReatorId;
-    private String setor;
-    private String unidade;
-    private String descricao;
 
+@RestController
+@RequestMapping("/localizacao-reator")
+public class LocalizacaoReatorController {
+    @Autowired
+    private LocalizacaoReatorService localizacaoReatorService;
+
+    @PostMapping("/withProcedure")
+    public ResponseEntity<String> insertLocalizacaoReator(@RequestBody @Valid LocalizacaoReatorDTO localizacaoReatorDTO) {
+        localizacaoReatorService.insertWithProcedure(localizacaoReatorDTO);
+        return ResponseEntity.ok("Localização do reator inserida com sucesso.");
+    }
 }

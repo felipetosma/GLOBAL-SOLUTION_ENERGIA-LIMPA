@@ -1,23 +1,27 @@
 package com.example.energyx.controller;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.hateoas.RepresentationModel;
+import com.example.energyx.dto.ReatoresDTO;
+import com.example.energyx.service.ReatoresService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import java.util.stream.Collectors;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class ReatoresController extends RepresentationModel<ReatoresController> {
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-    private Long reatorId;
-    private String nomeReator;
-    private Long pressaoMax;
-    private Long temperaturaMax;
-    private Long radiacaoMax;
-    private Long tipoReatorId;  // Referência ao id de TipoReator
-    private Long localizacaoReatorId;  // Referência ao id de LocalizacaoReator
+@RestController
+@RequestMapping("/reatores")
+public class ReatoresController {
+    @Autowired
+    private ReatoresService reatoresService;
 
+    @PostMapping("/withProcedure")
+    public ResponseEntity<String> insertReator(@RequestBody @Valid ReatoresDTO reatoresDTO) {
+        reatoresService.insertWithProcedure(reatoresDTO);
+        return ResponseEntity.ok("Reator inserido com sucesso.");
+    }
 }

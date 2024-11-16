@@ -15,25 +15,20 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TipoReator {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "tipo_reator_id")
     private Long tipoReatorId;
 
-    @NotBlank(message = "A descrição do reator é obrigatória.")
     @Column(name = "descricao_reator", nullable = false, length = 200)
     private String descricaoReator;
 
-    @NotNull(message = "A capacidade de energia é obrigatória.")
-    @Column(name = "capacidade_energia", nullable = false)
+    @Column(name = "capacidade_energia", nullable = false, precision = 30)
     private Long capacidadeEnergia;
 
-    @NotBlank(message = "A tecnologia do reator é obrigatória.")
     @Column(name = "tecnologia", nullable = false, length = 50)
     private String tecnologia;
 
-    @NotBlank(message = "O fabricante é obrigatório.")
     @Column(name = "fabricante", nullable = false, length = 50)
     private String fabricante;
 }

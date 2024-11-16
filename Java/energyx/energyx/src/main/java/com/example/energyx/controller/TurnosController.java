@@ -1,34 +1,27 @@
 package com.example.energyx.controller;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.energyx.dto.TurnosDTO;
+import com.example.energyx.service.TurnosService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import java.util.stream.Collectors;
 
-import java.util.Date;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-@Entity
-@Table(name = "gs_el_turnos")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@RestController
+@RequestMapping("/turnos")
 public class TurnosController {
+    @Autowired
+    private TurnosService turnosService;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "turno_id")
-    private Long turnoId;
-
-    @NotNull(message = "A data de início é obrigatória.")
-    @Column(name = "data_inicio", nullable = false)
-    @Temporal(TemporalType.DATE)
-    private Date dataInicio;
-
-    @Column(name = "data_fim")
-    @Temporal(TemporalType.DATE)
-    private Date dataFim;
+    @PostMapping("/withProcedure")
+    public ResponseEntity<String> insertTurno(@RequestBody @Valid TurnosDTO turnosDTO) {
+        turnosService.insertWithProcedure(turnosDTO);
+        return ResponseEntity.ok("Turno inserido com sucesso.");
+    }
 }
-

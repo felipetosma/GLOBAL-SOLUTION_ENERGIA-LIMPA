@@ -13,16 +13,15 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LocalizacaoReator {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "loc_reator_id")
     private Long locReatorId;
 
-    @Column(name = "setor", length = 50, nullable = false)
+    @Column(name = "setor", nullable = false, length = 50)
     private String setor;
 
-    @Column(name = "unidade", length = 20, nullable = false)
+    @Column(name = "unidade", nullable = false, length = 20)
     private String unidade;
 
     @Column(name = "descricao", length = 250)
