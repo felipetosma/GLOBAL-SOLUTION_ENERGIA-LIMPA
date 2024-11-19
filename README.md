@@ -1,33 +1,68 @@
-Sistema de Monitoramento e Emissão de Alertas de Condições Adversas para Operadores de Usinas Nucleares
+# 🏭 Sistema de Monitoramento e Emissão de Alertas para Operadores de Usinas Nucleares
 
-O projeto visa desenvolver um sistema integrado de monitoramento e emissão de alertas para operadores de usinas nucleares, com o objetivo de garantir a segurança operacional e pessoal. O sistema é composto por três principais componentes:
+## 📝 Descrição Geral do Projeto
 
-1. Aplicativo Mobile de Monitoramento
-Este aplicativo oferece uma plataforma intuitiva para os operadores monitorarem em tempo real as principais variáveis do reator nuclear. Os principais recursos incluem:
-Login e Cadastro do Operador: Controle de acesso seguro aos dados sensíveis.
-	- Tela Principal com Botões de Navegação:
-	- Tela de Temperatura do Núcleo: Exibe a temperatura atual do núcleo do reator.
-	- Tela de Pressão do Reator: Monitora a pressão interna do reator.
-	- Tela de Fluxo de Refrigeração: Informa sobre o fluxo de líquido refrigerante.
-	- Tela de Níveis de Radiação: Mostra os níveis de radiação nas áreas monitoradas.
+O Sistema de Monitoramento e Emissão de Alertas foi desenvolvido para operadores de usinas nucleares, com o objetivo de garantir a segurança e o monitoramento constante das condições operacionais da usina. Este sistema envolve a coleta de dados em tempo real, como temperatura, pressão, radiação, e fluxo de refrigeração, com emissão de alertas para condições adversas e críticas.
 
-Status Geral: Indica a situação geral (Normal, Alerta, Crítico) com base nos dados coletados.
-Integração com Java e Banco de Dados Oracle: Armazena e gerencia os dados operacionais.
+Além disso, o sistema conta com um módulo de verificação do uso de EPIs (Equipamentos de Proteção Individual) pelos operadores, utilizando tecnologias de deep learning e visão computacional.
 
-2. Aplicativo .NET para Relatório Diário de Trabalho
-Este componente permite aos operadores registrar e acompanhar suas atividades diárias, proporcionando uma documentação padronizada das operações.
-	- Login e Cadastro do Operador: Acesso seguro ao sistema.
-	- Tela Principal de Relatório: Interface para registro detalhado de atividades.
-	- Integração com Banco de Dados Oracle: Armazenamento de dados de forma centralizada e segura.
+## ⚡ Funcionalidades
 
-3. Deep Learning & Visão Computacional para Verificação de EPIs
-O uso de tecnologias de deep learning permite a verificação automática dos Equipamentos de Proteção Individual (EPIs) usados pelos operadores antes de entrarem na sala de operações. As principais funcionalidades incluem:
-	- Treinamento de Modelo de Machine Learning: Detecção de EPIs como máscaras, óculos de proteção e macacões.
-	- Reconhecimento e Alerta: Identifica se os operadores estão devidamente equipados, garantindo conformidade com as normas de 	  segurança.
+### 📱 Aplicação Móvel:
+- Login e Cadastro do Operador
+- Monitoramento de Temperatura, Pressão, Fluxo de Refrigeração e Níveis de Radiação
+- Status Geral (Normal, Alerta, Crítico)
+- Integração com o Sistema Backend (Java) e Banco de Dados Oracle
 
-Objetivos do Projeto:
--Monitorar condições críticas do reator nuclear em tempo real.
--Emitir alertas em situações de risco para intervenção rápida.
--Registrar as atividades diárias dos operadores de forma eficiente.
--Garantir a segurança pessoal dos operadores através da verificação automática do uso de EPIs.
--Este projeto é relevante para a segurança nuclear, pois contribui para a prevenção de acidentes e assegura que os operadores estejam sempre cientes das condições em que trabalham. A integração das aplicações com um banco de dados robusto permite um armazenamento seguro e um acesso eficiente aos dados coletados.
+### 💻 Aplicação .NET (Relatório Diário):
+- Login e Cadastro do Operador
+- Tela de Relatório Diário de Trabalho
+- Integração com Banco de Dados Oracle para armazenar os dados do relatório
+
+### 🤖 Deep Learning & Visão Computacional:
+- Reconhecimento de EPIs, como máscara, óculos, e macacão, garantindo que os operadores estejam utilizando o equipamento adequado.
+
+## 🛠 Tecnologias Utilizadas
+
+### Backend:
+- Java
+- Spring Boot
+- Oracle Database
+- Docker
+
+### Frontend/Mobile:
+- Kotlin
+- Figma
+
+### Deep Learning & Visão Computacional:
+- Python
+- TensorFlow/Keras
+- OpenCV
+
+### Relatório Diário:
+- .NET Core
+- Entity Framework
+- Oracle Database
+
+## 💾 Modelagem do banco de dados
+![WhatsApp Image 2024-11-18 at 18 25 45](https://github.com/user-attachments/assets/27a34019-1f4d-435a-9f2c-437c1950bf7d)
+
+### Backend com Java Spring Boot
+O EnergyX Backend é uma aplicação backend desenvolvida em Java que integra funcionalidades de monitoramento de condições adversas em usinas nucleares, com foco em garantir a segurança através, sobretudo, da gestão de processos. A aplicação utiliza a tecnologia Spring Boot para fornecer uma API RESTful que interage com o banco de dados Oracle e comunica-se com a aplicação mobile para exibir informações sobre as condições da usina e operadores.
+
+## 🌍 Sobre o Projeto Global Solutions
+A cada semestre, desenvolvemos um projeto que integra todas as disciplinas do curso de Análise e Desenvolvimento de Sistemas, com o objetivo de propor soluções para um tema de relevância global, promovido pela nossa instituição.
+
+### Global Solutions - Tema: Energia Renovável
+Este projeto aborda soluções inovadoras e sustentáveis para questões relacionadas à energia renovável, buscando promover um impacto positivo na sociedade e no meio ambiente.
+
+## 🎓 Instituição
+**FIAP - Faculdade de Informática e Administração Paulista**  
+Turma: 2TDSPS
+
+## 👨‍💻 Desenvolvedores
+| Nome | RM |
+|------|------|
+| Felipe Amador | RM 553528 |
+| Leonardo Oliveira | RM 554024 |
+| Sara Sousa | RM 552656 |
