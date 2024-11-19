@@ -15,7 +15,6 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class NiveisOperacionaisDTO {
-    private Long nivelOperacionalId;
     private Date dataHoraMedicao;
     private Long pressao;
     private Long temperatura;

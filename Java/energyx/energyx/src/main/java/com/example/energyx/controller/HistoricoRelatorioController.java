@@ -18,11 +18,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RequestMapping("/historico-relatorio")
 public class HistoricoRelatorioController {
     @Autowired
-    private HistoricoRelatorioService historicoRelatorioService;
+    private HistoricoRelatorioService service;
 
-    @PostMapping("/withProcedure")
-    public ResponseEntity<String> insertHistoricoRelatorio(@RequestBody @Valid HistoricoRelatorioDTO historicoRelatorioDTO) {
-        historicoRelatorioService.insertWithProcedure(historicoRelatorioDTO);
-        return ResponseEntity.ok("Histórico de relatório inserido com sucesso.");
+    @PostMapping("/batch")
+    public ResponseEntity<String> insertBatch(@RequestBody List<HistoricoRelatorioDTO> dtos) {
+        service.insertBatch(dtos);
+        return ResponseEntity.ok("Históricos de relatório inseridos com sucesso");
     }
 }

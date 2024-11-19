@@ -16,21 +16,19 @@ import java.util.stream.Collectors;
 @Service
 public class NiveisOperacionaisService {
     @Autowired
-    private NiveisOperacionaisRepository niveisOperacionaisRepository;
+    private NiveisOperacionaisRepository repository;
 
     @Transactional
-    public void insertWithProcedure(NiveisOperacionaisDTO niveisOperacionaisDTO) {
-        try {
-            niveisOperacionaisRepository.inserir_niveis_operacionais(
-                    niveisOperacionaisDTO.getDataHoraMedicao(),
-                    niveisOperacionaisDTO.getPressao(),
-                    niveisOperacionaisDTO.getTemperatura(),
-                    niveisOperacionaisDTO.getRadiacao(),
-                    niveisOperacionaisDTO.getFluxoRefrigeracao(),
-                    niveisOperacionaisDTO.getReatorId()
+    public void insertBatch(List<NiveisOperacionaisDTO> dtos) {
+        for (NiveisOperacionaisDTO dto : dtos) {
+            repository.inserirNivelOperacional(
+                    dto.getDataHoraMedicao(),
+                    dto.getPressao(),
+                    dto.getTemperatura(),
+                    dto.getRadiacao(),
+                    dto.getFluxoRefrigeracao(),
+                    dto.getReatorId()
             );
-        } catch (Exception e) {
-            throw new RuntimeException("Erro ao inserir níveis operacionais: " + e.getMessage());
         }
     }
 }

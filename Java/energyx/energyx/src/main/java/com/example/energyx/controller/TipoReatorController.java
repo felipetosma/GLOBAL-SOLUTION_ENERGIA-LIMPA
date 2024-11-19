@@ -17,11 +17,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RequestMapping("/tipo-reator")
 public class TipoReatorController {
     @Autowired
-    private TipoReatorService tipoReatorService;
+    private TipoReatorService service;
 
-    @PostMapping("/withProcedure")
-    public ResponseEntity<String> insertTipoReator(@RequestBody @Valid TipoReatorDTO tipoReatorDTO) {
-        tipoReatorService.insertWithProcedure(tipoReatorDTO);
-        return ResponseEntity.ok("Tipo de reator inserido com sucesso.");
+    @PostMapping("/batch")
+    public ResponseEntity<String> insertBatch(@RequestBody List<TipoReatorDTO> dtos) {
+        service.insertBatch(dtos);
+        return ResponseEntity.ok("Tipos de reator inseridos com sucesso");
     }
 }

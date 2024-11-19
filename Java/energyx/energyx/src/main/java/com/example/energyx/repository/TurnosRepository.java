@@ -8,11 +8,11 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 
+
 @Repository
 public interface TurnosRepository extends JpaRepository<Turnos, Long> {
-    @Procedure(name = "inserir_turno")
-    void inserir_turno(
-            @Param("v_data_inicio") Date dataInicio,
-            @Param("v_data_fim") Date dataFim
+    @Procedure(procedureName = "inserir_turnos")
+    void inserirTurno(
+            @Param("v_descricao_turno") String descricaoTurno
     );
 }

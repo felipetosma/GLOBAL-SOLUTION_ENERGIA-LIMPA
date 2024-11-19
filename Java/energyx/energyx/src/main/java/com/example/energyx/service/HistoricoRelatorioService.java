@@ -16,18 +16,16 @@ import java.util.stream.Collectors;
 @Service
 public class HistoricoRelatorioService {
     @Autowired
-    private HistoricoRelatorioRepository historicoRelatorioRepository;
+    private HistoricoRelatorioRepository repository;
 
     @Transactional
-    public void insertWithProcedure(HistoricoRelatorioDTO historicoRelatorioDTO) {
-        try {
-            historicoRelatorioRepository.inserir_historico_relatorio(
-                    historicoRelatorioDTO.getDataHoraAtualizacao(),
-                    historicoRelatorioDTO.getObservacoes(),
-                    historicoRelatorioDTO.getRelatorioTurnoId()
+    public void insertBatch(List<HistoricoRelatorioDTO> dtos) {
+        for (HistoricoRelatorioDTO dto : dtos) {
+            repository.inserirHistoricoRelatorio(
+                    dto.getDataHoraAtualizacao(),
+                    dto.getObservacoes(),
+                    dto.getRelatorioTurnoId()
             );
-        } catch (Exception e) {
-            throw new RuntimeException("Erro ao inserir histórico de relatório: " + e.getMessage());
         }
     }
 }

@@ -19,9 +19,10 @@ public class TurnosController {
     @Autowired
     private TurnosService turnosService;
 
-    @PostMapping("/withProcedure")
-    public ResponseEntity<String> insertTurno(@RequestBody @Valid TurnosDTO turnosDTO) {
-        turnosService.insertWithProcedure(turnosDTO);
-        return ResponseEntity.ok("Turno inserido com sucesso.");
+   // Novo endpoint para inserção em lote
+    @PostMapping("/batch")
+    public ResponseEntity<String> insertTurnosBatch(@RequestBody @Valid List<TurnosDTO> turnosDTO) {
+        turnosService.insertBatch(turnosDTO);
+        return ResponseEntity.ok("Turnos inseridos com sucesso.");
     }
 }

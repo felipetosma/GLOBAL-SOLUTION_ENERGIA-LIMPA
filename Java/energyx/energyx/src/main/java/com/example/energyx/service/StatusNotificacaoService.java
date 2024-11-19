@@ -14,16 +14,14 @@ import java.util.stream.Collectors;
 @Service
 public class StatusNotificacaoService {
     @Autowired
-    private StatusNotificacaoRepository statusNotificacaoRepository;
+    private StatusNotificacaoRepository repository;
 
     @Transactional
-    public void insertWithProcedure(StatusNotificacaoDTO statusNotificacaoDTO) {
-        try {
-            statusNotificacaoRepository.inserir_status_notificacao(
-                    statusNotificacaoDTO.getDescrStatus()
+    public void insertBatch(List<StatusNotificacaoDTO> dtos) {
+        for (StatusNotificacaoDTO dto : dtos) {
+            repository.inserirStatusNotificacao(
+                    dto.getDescrStatus()
             );
-        } catch (Exception e) {
-            throw new RuntimeException("Erro ao inserir status de notificação: " + e.getMessage());
         }
     }
 }

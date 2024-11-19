@@ -10,8 +10,8 @@ import java.time.LocalDateTime;
 
 @Repository
 public interface NotificacoesRepository extends JpaRepository<Notificacoes, Long> {
-    @Procedure(name = "inserir_notificacao")
-    void inserir_notificacao(
+    @Procedure(procedureName = "inserir_notificacao")
+    void inserirNotificacao(
             @Param("v_data_hora_notificacao") LocalDateTime dataHoraNotificacao,
             @Param("v_status_notificacao_id") Long statusNotificacaoId,
             @Param("v_operador_id") Long operadorId,

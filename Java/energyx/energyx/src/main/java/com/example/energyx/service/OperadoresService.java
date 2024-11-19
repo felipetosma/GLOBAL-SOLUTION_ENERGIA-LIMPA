@@ -6,24 +6,23 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class OperadoresService {
-
     @Autowired
-    private OperadoresRepository operadoresRepository;
+    private OperadoresRepository repository;
 
     @Transactional
-    public void insertWithProcedure(OperadoresDTO operadoresDTO) {
-        try {
-            operadoresRepository.inserir_operador(
-                    operadoresDTO.getNomeOperador(),
-                    operadoresDTO.getSenhaOperador(),
-                    operadoresDTO.getCargo(),
-                    operadoresDTO.getTurnoId(),
-                    operadoresDTO.getLor()
+    public void insertBatch(List<OperadoresDTO> dtos) {
+        for (OperadoresDTO dto : dtos) {
+            repository.inserirOperador(
+                    dto.getNomeOperador(),
+                    dto.getSenhaOperador(),
+                    dto.getCargo(),
+                    dto.getTurnoId(),
+                    dto.getLor()
             );
-        } catch (Exception e) {
-            throw new RuntimeException("Erro ao inserir operador: " + e.getMessage());
         }
     }
 }

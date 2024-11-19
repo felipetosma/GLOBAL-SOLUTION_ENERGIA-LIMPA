@@ -16,18 +16,16 @@ import java.util.stream.Collectors;
 @Service
 public class HistoricoNotificacoesService {
     @Autowired
-    private HistoricoNotificacoesRepository historicoNotificacoesRepository;
+    private HistoricoNotificacoesRepository repository;
 
     @Transactional
-    public void insertWithProcedure(HistoricoNotificacoesDTO historicoNotificacoesDTO) {
-        try {
-            historicoNotificacoesRepository.inserir_historico_notificacao(
-                    historicoNotificacoesDTO.getDataHoraAtualizacaoNotif(),
-                    historicoNotificacoesDTO.getObservacaoNotificacao(),
-                    historicoNotificacoesDTO.getNotificacaoId()
+    public void insertBatch(List<HistoricoNotificacoesDTO> dtos) {
+        for (HistoricoNotificacoesDTO dto : dtos) {
+            repository.inserirHistoricoNotificacao(
+                    dto.getDataHoraAtualizacaoNotif(),
+                    dto.getObservacaoNotificacao(),
+                    dto.getNotificacaoId()
             );
-        } catch (Exception e) {
-            throw new RuntimeException("Erro ao inserir histórico de notificação: " + e.getMessage());
         }
     }
 }

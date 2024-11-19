@@ -11,7 +11,6 @@ import org.springframework.hateoas.RepresentationModel;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TipoReatorDTO {
-    private Long tipoReatorId;
     private String descricaoReator;
     private Long capacidadeEnergia;
     private String tecnologia;

@@ -11,6 +11,5 @@ import org.springframework.hateoas.RepresentationModel;
 @NoArgsConstructor
 @AllArgsConstructor
 public class StatusNotificacaoDTO {
-    private Long statusNotificacaoId;
     private String descrStatus;
 }

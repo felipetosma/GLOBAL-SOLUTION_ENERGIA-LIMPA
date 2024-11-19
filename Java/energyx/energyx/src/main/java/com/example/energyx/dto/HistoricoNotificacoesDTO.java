@@ -14,7 +14,6 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class HistoricoNotificacoesDTO {
-    private Long histNotificacaoId;
     private LocalDateTime  dataHoraAtualizacaoNotif;
     private String observacaoNotificacao;
     private Long notificacaoId;

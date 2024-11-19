@@ -17,11 +17,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RequestMapping("/niveis-operacionais")
 public class NiveisOperacionaisController {
     @Autowired
-    private NiveisOperacionaisService niveisOperacionaisService;
+    private NiveisOperacionaisService service;
 
-    @PostMapping("/withProcedure")
-    public ResponseEntity<String> insertNiveisOperacionais(@RequestBody @Valid NiveisOperacionaisDTO niveisOperacionaisDTO) {
-        niveisOperacionaisService.insertWithProcedure(niveisOperacionaisDTO);
-        return ResponseEntity.ok("Níveis operacionais inseridos com sucesso.");
+    @PostMapping("/batch")
+    public ResponseEntity<String> insertBatch(@RequestBody List<NiveisOperacionaisDTO> dtos) {
+        service.insertBatch(dtos);
+        return ResponseEntity.ok("Níveis operacionais inseridos com sucesso");
     }
 }

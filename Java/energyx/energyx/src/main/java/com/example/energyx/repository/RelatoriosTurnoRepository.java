@@ -10,8 +10,8 @@ import java.util.Date;
 
 @Repository
 public interface RelatoriosTurnoRepository extends JpaRepository<RelatoriosTurno, Long> {
-    @Procedure(name = "inserir_relatorio_turno")
-    void inserir_relatorio_turno(
+    @Procedure(procedureName = "inserir_relatorio_turno")
+    void inserirRelatorioTurno(
             @Param("v_data_hora_relatorio") Date dataHoraRelatorio,
             @Param("v_resumo_atividades") String resumoAtividades,
             @Param("v_observacoes") String observacoes,

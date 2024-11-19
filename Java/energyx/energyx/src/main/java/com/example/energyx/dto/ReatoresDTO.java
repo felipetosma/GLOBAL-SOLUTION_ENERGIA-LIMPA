@@ -12,7 +12,6 @@ import org.springframework.hateoas.RepresentationModel;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ReatoresDTO {
-    private Long reatorId;
     private String nomeReator;
     private Long pressaoMax;
     private Long temperaturaMax;

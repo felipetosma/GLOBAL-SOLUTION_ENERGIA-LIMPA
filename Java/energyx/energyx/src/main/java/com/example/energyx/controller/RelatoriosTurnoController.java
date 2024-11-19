@@ -17,11 +17,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RequestMapping("/relatorios-turno")
 public class RelatoriosTurnoController {
     @Autowired
-    private RelatoriosTurnoService relatoriosTurnoService;
+    private RelatoriosTurnoService service;
 
-    @PostMapping("/withProcedure")
-    public ResponseEntity<String> insertRelatorioTurno(@RequestBody @Valid RelatoriosTurnoDTO relatoriosTurnoDTO) {
-        relatoriosTurnoService.insertWithProcedure(relatoriosTurnoDTO);
-        return ResponseEntity.ok("Relatório de turno inserido com sucesso.");
+    @PostMapping("/batch")
+    public ResponseEntity<String> insertBatch(@RequestBody List<RelatoriosTurnoDTO> dtos) {
+        service.insertBatch(dtos);
+        return ResponseEntity.ok("Relatórios de turno inseridos com sucesso");
     }
 }

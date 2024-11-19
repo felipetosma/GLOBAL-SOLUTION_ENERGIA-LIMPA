@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface LocalizacaoReatorRepository extends JpaRepository<LocalizacaoReator, Long> {
-    @Procedure(name = "inserir_localizacao_reator")
-    void inserir_localizacao_reator(
+    @Procedure(procedureName = "inserir_localizacao_reator")
+    void inserirLocalizacaoReator(
             @Param("v_setor") String setor,
             @Param("v_unidade") String unidade,
             @Param("v_descricao") String descricao

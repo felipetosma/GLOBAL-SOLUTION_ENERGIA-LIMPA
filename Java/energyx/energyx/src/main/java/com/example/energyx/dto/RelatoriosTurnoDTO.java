@@ -13,7 +13,6 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RelatoriosTurnoDTO {
-    private Long relatorioTurnoId;
     private Date dataHoraRelatorio;
     private String resumoAtividades;
     private String observacoes;

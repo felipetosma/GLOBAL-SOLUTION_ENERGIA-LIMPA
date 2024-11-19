@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ReatoresRepository extends JpaRepository<Reatores, Long> {
-    @Procedure(name = "inserir_reator")
-    void inserir_reator(
+    @Procedure(procedureName = "inserir_reator")
+    void inserirReator(
             @Param("v_nome_reator") String nomeReator,
             @Param("v_pressao_max") Long pressaoMax,
             @Param("v_temperatura_max") Long temperaturaMax,

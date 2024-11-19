@@ -17,14 +17,12 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RestController
 @RequestMapping("/operadores")
 public class OperadoresController {
-
     @Autowired
-    private OperadoresService operadoresService;
+    private OperadoresService service;
 
-    @PostMapping("/withProcedure")
-    public ResponseEntity<String> insertOperador(@RequestBody @Valid OperadoresDTO operadoresDTO) {
-        operadoresService.insertWithProcedure(operadoresDTO);
-        return ResponseEntity.ok("Operador inserido com sucesso.");
+    @PostMapping("/batch")
+    public ResponseEntity<String> insertBatch(@RequestBody List<OperadoresDTO> dtos) {
+        service.insertBatch(dtos);
+        return ResponseEntity.ok("Operadores inseridos com sucesso");
     }
-
 }

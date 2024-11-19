@@ -13,7 +13,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class NotificacoesDTO {
-    private Long notificacaoId;
     private LocalDateTime dataHoraNotificacao;
     private Long statusNotificacaoId;
     private Long operadorId;

@@ -18,20 +18,18 @@ import java.util.stream.Collectors;
 @Service
 public class RelatoriosTurnoService {
     @Autowired
-    private RelatoriosTurnoRepository relatoriosTurnoRepository;
+    private RelatoriosTurnoRepository repository;
 
     @Transactional
-    public void insertWithProcedure(RelatoriosTurnoDTO relatoriosTurnoDTO) {
-        try {
-            relatoriosTurnoRepository.inserir_relatorio_turno(
-                    relatoriosTurnoDTO.getDataHoraRelatorio(),
-                    relatoriosTurnoDTO.getResumoAtividades(),
-                    relatoriosTurnoDTO.getObservacoes(),
-                    relatoriosTurnoDTO.getOperadorId(),
-                    relatoriosTurnoDTO.getReatorId()
+    public void insertBatch(List<RelatoriosTurnoDTO> dtos) {
+        for (RelatoriosTurnoDTO dto : dtos) {
+            repository.inserirRelatorioTurno(
+                    dto.getDataHoraRelatorio(),
+                    dto.getResumoAtividades(),
+                    dto.getObservacoes(),
+                    dto.getOperadorId(),
+                    dto.getReatorId()
             );
-        } catch (Exception e) {
-            throw new RuntimeException("Erro ao inserir relatório de turno: " + e.getMessage());
         }
     }
 }

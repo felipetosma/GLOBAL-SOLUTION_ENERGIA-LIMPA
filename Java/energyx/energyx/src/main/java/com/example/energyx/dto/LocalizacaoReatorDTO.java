@@ -11,7 +11,6 @@ import org.springframework.hateoas.RepresentationModel;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LocalizacaoReatorDTO {
-    private Long locReatorId;
     private String setor;
     private String unidade;
     private String descricao;

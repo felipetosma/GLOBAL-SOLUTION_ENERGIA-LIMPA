@@ -18,22 +18,20 @@ import java.util.stream.Collectors;
 @Service
 public class ReatoresService {
     @Autowired
-    private ReatoresRepository reatoresRepository;
+    private ReatoresRepository repository;
 
     @Transactional
-    public void insertWithProcedure(ReatoresDTO reatorDTO) {
-        try {
-            reatoresRepository.inserir_reator(
-                    reatorDTO.getNomeReator(),
-                    reatorDTO.getPressaoMax(),
-                    reatorDTO.getTemperaturaMax(),
-                    reatorDTO.getRadiacaoMax(),
-                    reatorDTO.getFluxoRefrigeracaoMax(),
-                    reatorDTO.getTipoReatorId(),
-                    reatorDTO.getLocReatorId()
+    public void insertBatch(List<ReatoresDTO> dtos) {
+        for (ReatoresDTO dto : dtos) {
+            repository.inserirReator(
+                    dto.getNomeReator(),
+                    dto.getPressaoMax(),
+                    dto.getTemperaturaMax(),
+                    dto.getRadiacaoMax(),
+                    dto.getFluxoRefrigeracaoMax(),
+                    dto.getTipoReatorId(),
+                    dto.getLocReatorId()
             );
-        } catch (Exception e) {
-            throw new RuntimeException("Erro ao inserir reator: " + e.getMessage());
         }
     }
 }

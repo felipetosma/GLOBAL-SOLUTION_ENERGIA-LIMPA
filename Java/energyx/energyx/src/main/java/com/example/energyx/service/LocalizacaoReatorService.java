@@ -14,18 +14,16 @@ import java.util.stream.Collectors;
 @Service
 public class LocalizacaoReatorService {
     @Autowired
-    private LocalizacaoReatorRepository localizacaoReatorRepository;
+    private LocalizacaoReatorRepository repository;
 
     @Transactional
-    public void insertWithProcedure(LocalizacaoReatorDTO localizacaoReatorDTO) {
-        try {
-            localizacaoReatorRepository.inserir_localizacao_reator(
-                    localizacaoReatorDTO.getSetor(),
-                    localizacaoReatorDTO.getUnidade(),
-                    localizacaoReatorDTO.getDescricao()
+    public void insertBatch(List<LocalizacaoReatorDTO> dtos) {
+        for (LocalizacaoReatorDTO dto : dtos) {
+            repository.inserirLocalizacaoReator(
+                    dto.getSetor(),
+                    dto.getUnidade(),
+                    dto.getDescricao()
             );
-        } catch (Exception e) {
-            throw new RuntimeException("Erro ao inserir localização do reator: " + e.getMessage());
         }
     }
 }

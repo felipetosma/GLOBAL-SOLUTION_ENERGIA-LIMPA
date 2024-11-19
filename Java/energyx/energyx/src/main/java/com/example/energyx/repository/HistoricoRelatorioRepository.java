@@ -11,8 +11,8 @@ import java.util.Date;
 
 @Repository
 public interface HistoricoRelatorioRepository extends JpaRepository<HistoricoRelatorio, Long> {
-    @Procedure(name = "inserir_historico_relatorio")
-    void inserir_historico_relatorio(
+    @Procedure(procedureName = "inserir_historico_relatorio")
+    void inserirHistoricoRelatorio(
             @Param("v_data_hora_atualizacao") LocalDateTime dataHoraAtualizacao,
             @Param("v_observacoes") String observacoes,
             @Param("v_relatorio_turno_id") Long relatorioTurnoId

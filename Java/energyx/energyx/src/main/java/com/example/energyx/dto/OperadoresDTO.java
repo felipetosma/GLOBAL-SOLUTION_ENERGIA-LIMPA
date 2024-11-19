@@ -11,8 +11,6 @@ import org.springframework.hateoas.RepresentationModel;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OperadoresDTO {
-
-    private Long operadorId;
     private String nomeOperador;
     private String senhaOperador;
     private String cargo;

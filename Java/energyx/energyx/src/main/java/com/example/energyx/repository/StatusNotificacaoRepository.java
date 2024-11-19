@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StatusNotificacaoRepository extends JpaRepository<StatusNotificacao, Long> {
-    @Procedure(name = "inserir_status_notificacao")
-    void inserir_status_notificacao(
+    @Procedure(procedureName = "inserir_status_notificacao")
+    void inserirStatusNotificacao(
             @Param("v_descr_status") String descrStatus
     );
 }

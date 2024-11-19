@@ -17,11 +17,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RequestMapping("/notificacoes")
 public class NotificacoesController {
     @Autowired
-    private NotificacoesService notificacoesService;
+    private NotificacoesService service;
 
-    @PostMapping("/withProcedure")
-    public ResponseEntity<String> insertNotificacao(@RequestBody @Valid NotificacoesDTO notificacoesDTO) {
-        notificacoesService.insertWithProcedure(notificacoesDTO);
-        return ResponseEntity.ok("Notificação inserida com sucesso.");
+    @PostMapping("/batch")
+    public ResponseEntity<String> insertBatch(@RequestBody List<NotificacoesDTO> dtos) {
+        service.insertBatch(dtos);
+        return ResponseEntity.ok("Notificações inseridas com sucesso");
     }
 }

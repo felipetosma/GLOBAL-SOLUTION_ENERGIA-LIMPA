@@ -1,6 +1,7 @@
 package com.example.energyx.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,9 +22,7 @@ public class Turnos {
     @Column(name = "turno_id")
     private Long turnoId;
 
-    @Column(name = "data_inicio", nullable = false)
-    private Date dataInicio;
-
-    @Column(name = "data_fim")
-    private Date dataFim;
+    @Column(name = "descricao_turno", nullable = false, length = 50)
+    @NotBlank(message = "A descrição do turno é obrigatória")
+    private String descricaoTurno;
 }

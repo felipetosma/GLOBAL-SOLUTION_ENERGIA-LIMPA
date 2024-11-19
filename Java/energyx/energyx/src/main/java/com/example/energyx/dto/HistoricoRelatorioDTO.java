@@ -15,7 +15,6 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class HistoricoRelatorioDTO {
-    private Long histRelatorioId;
     private LocalDateTime dataHoraAtualizacao;
     private String observacoes;
     private Long relatorioTurnoId;

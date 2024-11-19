@@ -20,19 +20,17 @@ import java.util.stream.Collectors;
 @Service
 public class NotificacoesService {
     @Autowired
-    private NotificacoesRepository notificacoesRepository;
+    private NotificacoesRepository repository;
 
     @Transactional
-    public void insertWithProcedure(NotificacoesDTO notificacoesDTO) {
-        try {
-            notificacoesRepository.inserir_notificacao(
-                    notificacoesDTO.getDataHoraNotificacao(),
-                    notificacoesDTO.getStatusNotificacaoId(),
-                    notificacoesDTO.getOperadorId(),
-                    notificacoesDTO.getReatorId()
+    public void insertBatch(List<NotificacoesDTO> dtos) {
+        for (NotificacoesDTO dto : dtos) {
+            repository.inserirNotificacao(
+                    dto.getDataHoraNotificacao(),
+                    dto.getStatusNotificacaoId(),
+                    dto.getOperadorId(),
+                    dto.getReatorId()
             );
-        } catch (Exception e) {
-            throw new RuntimeException("Erro ao inserir notificação: " + e.getMessage());
         }
     }
 }

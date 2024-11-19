@@ -1,19 +1,13 @@
 package com.example.energyx.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.hateoas.RepresentationModel;
 
 import java.util.Date;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class TurnosDTO {
-    private Long turnoId;
-    private Date dataInicio;
-    private Date dataFim;
+    private String descricaoTurno;
 }

@@ -17,11 +17,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RequestMapping("/historico-notificacoes")
 public class HistoricoNotificacoesController {
     @Autowired
-    private HistoricoNotificacoesService historicoNotificacoesService;
+    private HistoricoNotificacoesService service;
 
-    @PostMapping("/withProcedure")
-    public ResponseEntity<String> insertHistoricoNotificacao(@RequestBody @Valid HistoricoNotificacoesDTO historicoNotificacoesDTO) {
-        historicoNotificacoesService.insertWithProcedure(historicoNotificacoesDTO);
-        return ResponseEntity.ok("Histórico de notificação inserido com sucesso.");
+    @PostMapping("/batch")
+    public ResponseEntity<String> insertBatch(@RequestBody List<HistoricoNotificacoesDTO> dtos) {
+        service.insertBatch(dtos);
+        return ResponseEntity.ok("Históricos de notificações inseridos com sucesso");
     }
 }

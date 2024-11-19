@@ -14,17 +14,12 @@ import java.util.stream.Collectors;
 @Service
 public class TurnosService {
     @Autowired
-    private TurnosRepository turnosRepository;
+    private TurnosRepository repository;
 
     @Transactional
-    public void insertWithProcedure(TurnosDTO turnosDTO) {
-        try {
-            turnosRepository.inserir_turno(
-                    turnosDTO.getDataInicio(),
-                    turnosDTO.getDataFim()
-            );
-        } catch (Exception e) {
-            throw new RuntimeException("Erro ao inserir turno: " + e.getMessage());
+    public void insertBatch(List<TurnosDTO> dtos) {
+        for (TurnosDTO dto : dtos) {
+            repository.inserirTurno(dto.getDescricaoTurno());
         }
     }
 }

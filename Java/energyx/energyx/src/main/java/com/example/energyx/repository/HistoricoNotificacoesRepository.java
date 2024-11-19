@@ -11,8 +11,8 @@ import java.util.Date;
 
 @Repository
 public interface HistoricoNotificacoesRepository extends JpaRepository<HistoricoNotificacoes, Long> {
-    @Procedure(name = "inserir_historico_notificacao")
-    void inserir_historico_notificacao(
+    @Procedure(procedureName = "inserir_historico_notificacao")
+    void inserirHistoricoNotificacao(
             @Param("v_data_hora_atualizacao_notif") LocalDateTime dataHoraAtualizacaoNotif,
             @Param("v_observacao_notificacao") String observacaoNotificacao,
             @Param("v_notificacao_id") Long notificacaoId

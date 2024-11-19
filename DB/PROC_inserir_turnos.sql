@@ -1,19 +1,11 @@
 CREATE OR REPLACE PROCEDURE inserir_turnos (
-    v_data_inicio IN gs_el_turnos.data_inicio%TYPE,
-    v_data_fim    IN gs_el_turnos.data_fim%TYPE
+    v_descricao_turno IN gs_el_turnos.descricao_turno%TYPE
 ) IS
 BEGIN
-    INSERT INTO gs_el_turnos (
-        data_inicio,
-        data_fim
-    ) VALUES (
-        v_data_inicio,
-        v_data_fim
-    );
+    INSERT INTO gs_el_turnos ( descricao_turno ) VALUES ( v_descricao_turno );
 
-    COMMIT;
 EXCEPTION
     WHEN OTHERS THEN
         dbms_output.put_line('Erro ao realizar a operação: ' || sqlerrm);
-        ROLLBACK;
+        RAISE;
 END;

@@ -17,11 +17,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RequestMapping("/status-notificacao")
 public class StatusNotificacaoController {
     @Autowired
-    private StatusNotificacaoService statusNotificacaoService;
+    private StatusNotificacaoService service;
 
-    @PostMapping("/withProcedure")
-    public ResponseEntity<String> insertStatusNotificacao(@RequestBody @Valid StatusNotificacaoDTO statusNotificacaoDTO) {
-        statusNotificacaoService.insertWithProcedure(statusNotificacaoDTO);
-        return ResponseEntity.ok("Status de notificação inserido com sucesso.");
+    @PostMapping("/batch")
+    public ResponseEntity<String> insertBatch(@RequestBody List<StatusNotificacaoDTO> dtos) {
+        service.insertBatch(dtos);
+        return ResponseEntity.ok("Status de notificação inseridos com sucesso");
     }
 }

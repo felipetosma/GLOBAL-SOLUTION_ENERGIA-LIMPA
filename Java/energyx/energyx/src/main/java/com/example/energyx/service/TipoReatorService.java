@@ -14,19 +14,17 @@ import java.util.stream.Collectors;
 @Service
 public class TipoReatorService {
     @Autowired
-    private TipoReatorRepository tipoReatorRepository;
+    private TipoReatorRepository repository;
 
     @Transactional
-    public void insertWithProcedure(TipoReatorDTO tipoReatorDTO) {
-        try {
-            tipoReatorRepository.inserir_tipo_reator(
-                    tipoReatorDTO.getDescricaoReator(),
-                    tipoReatorDTO.getCapacidadeEnergia(),
-                    tipoReatorDTO.getTecnologia(),
-                    tipoReatorDTO.getFabricante()
+    public void insertBatch(List<TipoReatorDTO> dtos) {
+        for (TipoReatorDTO dto : dtos) {
+            repository.inserirTipoReator(
+                    dto.getDescricaoReator(),
+                    dto.getCapacidadeEnergia(),
+                    dto.getTecnologia(),
+                    dto.getFabricante()
             );
-        } catch (Exception e) {
-            throw new RuntimeException("Erro ao inserir tipo de reator: " + e.getMessage());
         }
     }
 }

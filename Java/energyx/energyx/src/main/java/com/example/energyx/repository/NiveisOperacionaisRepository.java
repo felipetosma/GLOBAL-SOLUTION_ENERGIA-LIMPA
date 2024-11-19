@@ -10,8 +10,8 @@ import java.util.Date;
 
 @Repository
 public interface NiveisOperacionaisRepository extends JpaRepository<NiveisOperacionais, Long> {
-    @Procedure(name = "inserir_niveis_operacionais")
-    void inserir_niveis_operacionais(
+    @Procedure(procedureName = "inserir_nivel_operacional")
+    void inserirNivelOperacional(
             @Param("v_data_hora_medicao") Date dataHoraMedicao,
             @Param("v_pressao") Long pressao,
             @Param("v_temperatura") Long temperatura,

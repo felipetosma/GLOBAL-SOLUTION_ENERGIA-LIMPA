@@ -18,11 +18,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RequestMapping("/localizacao-reator")
 public class LocalizacaoReatorController {
     @Autowired
-    private LocalizacaoReatorService localizacaoReatorService;
+    private LocalizacaoReatorService service;
 
-    @PostMapping("/withProcedure")
-    public ResponseEntity<String> insertLocalizacaoReator(@RequestBody @Valid LocalizacaoReatorDTO localizacaoReatorDTO) {
-        localizacaoReatorService.insertWithProcedure(localizacaoReatorDTO);
-        return ResponseEntity.ok("Localização do reator inserida com sucesso.");
+    @PostMapping("/batch")
+    public ResponseEntity<String> insertBatch(@RequestBody List<LocalizacaoReatorDTO> dtos) {
+        service.insertBatch(dtos);
+        return ResponseEntity.ok("Localizações de reator inseridas com sucesso");
     }
 }
