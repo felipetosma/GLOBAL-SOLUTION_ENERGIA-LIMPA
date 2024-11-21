@@ -1,0 +1,66 @@
+{"historico_notificacoes":[
+{"hist_notificacao_id":1,"data_hora_atualizacao_notif":"2024-03-17T11:00:00","observacao_notificacao":"Análise técnica concluída - parâmetros normalizados","notificacao_id":1},{"hist_notificacao_id":2,"data_hora_atualizacao_notif":"2024-03-17T11:00:00","observacao_notificacao":"Manutenção preventiva agendada para próximo turno","notificacao_id":2},{"hist_notificacao_id":3,"data_hora_atualizacao_notif":"2024-03-17T15:30:00","observacao_notificacao":"Verificação de segurança concluída com sucesso","notificacao_id":3},{"hist_notificacao_id":7,"data_hora_atualizacao_notif":"2024-03-18T16:45:00","observacao_notificacao":"Inspeção visual dos componentes do sistema de controle realizada","notificacao_id":4},{"hist_notificacao_id":8,"data_hora_atualizacao_notif":"2024-03-18T19:30:00","observacao_notificacao":"Teste de integridade do sistema de proteção executado com sucesso","notificacao_id":5}],
+
+
+"historico_relatorio":[
+{"hist_relatorio_id":1,"data_hora_atualizacao":"2024-03-17T12:15:00","observacoes":"Atualização do relatório com dados complementares","relatorio_turno_id":1},{"hist_relatorio_id":2,"data_hora_atualizacao":"2024-03-17T12:15:00","observacoes":"Incluídos dados de calibração dos instrumentos","relatorio_turno_id":2},{"hist_relatorio_id":3,"data_hora_atualizacao":"2024-03-17T20:30:00","observacoes":"Adicionado relatório de inspeção visual","relatorio_turno_id":3},{"hist_relatorio_id":4,"data_hora_atualizacao":"2024-03-18T08:30:00","observacoes":"Inclusão de dados detalhados sobre calibração de instrumentos","relatorio_turno_id":1},{"hist_relatorio_id":5,"data_hora_atualizacao":"2024-03-18T16:30:00","observacoes":"Adicionadas informações sobre procedimentos de manutenção","relatorio_turno_id":2},{"hist_relatorio_id":6,"data_hora_atualizacao":"2024-03-19T00:30:00","observacoes":"Complemento de informações sobre testes de segurança","relatorio_turno_id":3},{"hist_relatorio_id":7,"data_hora_atualizacao":"2024-03-19T08:30:00","observacoes":"Atualização dos registros de medição de radiação","relatorio_turno_id":4},{"hist_relatorio_id":8,"data_hora_atualizacao":"2024-03-19T16:30:00","observacoes":"Inclusão de relatório de verificação do sistema de controle","relatorio_turno_id":5}],
+
+
+"localizacao_reator":[
+{"loc_reator_id":1,"setor":"Setor Nuclear Principal","unidade":"Unidade 1","descricao":"Prédio principal do reator - Área controlada"},
+{"loc_reator_id":2,"setor":"Setor Nuclear Principal","unidade":"Unidade 1","descricao":"Prédio principal do reator - Área controlada"},
+{"loc_reator_id":3,"setor":"Complexo Nuclear C","unidade":"Unidade 3","descricao":"Área de monitoramento avançado - Setor de alta segurança"}],
+
+
+"niveis_operacionais":[
+{"nivel_operacional_id":1,"data_hora_medicao":"2024-03-16T11:30:00","pressao":1200,"temperatura":650,"radiacao":75,"fluxo_refrigeracao":1800,"reator_id":1},{"nivel_operacional_id":2,"data_hora_medicao":"2024-03-17T05:45:00","pressao":1180,"temperatura":625,"radiacao":72,"fluxo_refrigeracao":1750,"reator_id":2},{"nivel_operacional_id":3,"data_hora_medicao":"2024-03-17T13:15:00","pressao":1220,"temperatura":680,"radiacao":78,"fluxo_refrigeracao":1850,"reator_id":3}],
+
+
+"notificacoes":[
+{"notificacao_id":1,"data_hora_notificacao":"2024-08-17T11:20:00","status_notificacao_id":1,"operador_id":1,"reator_id":1},
+{"notificacao_id":2,"data_hora_notificacao":"2024-03-17T10:20:00","status_notificacao_id":2,"operador_id":2,"reator_id":2},
+{"notificacao_id":3,"data_hora_notificacao":"2024-03-17T14:50:00","status_notificacao_id":3,"operador_id":3,"reator_id":3},
+{"notificacao_id":4,"data_hora_notificacao":"2024-03-18T08:15:00","status_notificacao_id":1,"operador_id":1,"reator_id":1},
+{"notificacao_id":5,"data_hora_notificacao":"2024-03-18T10:30:00","status_notificacao_id":2,"operador_id":2,"reator_id":1},
+{"notificacao_id":6,"data_hora_notificacao":"2024-03-18T13:45:00","status_notificacao_id":1,"operador_id":3,"reator_id":2},
+{"notificacao_id":7,"data_hora_notificacao":"2024-03-18T16:20:00","status_notificacao_id":3,"operador_id":4,"reator_id":2},
+{"notificacao_id":8,"data_hora_notificacao":"2024-03-18T19:05:00","status_notificacao_id":2,"operador_id":5,"reator_id":1}],
+
+
+"operadores":[
+{"operador_id":17,"nome_operador":"Sara Sousa","senha_operador":"sara123","cargo":"Operadora Senior","turno_id":2,"lor":"LOR4123"},{"operador_id":15,"nome_operador":"dsadasd","senha_operador":"12345678","cargo":"dasdasd","turno_id":2,"lor":"12398-CNEN"},{"operador_id":18,"nome_operador":"Leonardo","senha_operador":"12345678","cargo":"Operador","turno_id":1,"lor":"04050-CNEN"},{"operador_id":19,"nome_operador":"Leonardo","senha_operador":"12345678","cargo":"Operador","turno_id":1,"lor":"54321-CNEN"},{"operador_id":21,"nome_operador":"Alberto","senha_operador":"12345678","cargo":"Operador Junior","turno_id":2,"lor":"LOR0666"},
+{"operador_id":2,"nome_operador":"Maria Oliveira","senha_operador":"MO@2024op","cargo":"Supervisor","turno_id":2,"lor":"69863-CNEN"},
+{"operador_id":3,"nome_operador":"Pedro Santos","senha_operador":"PS#2024op","cargo":"Operador Junior","turno_id":3,"lor":"15489-CNEN"},
+{"operador_id":4,"nome_operador":"Ana Costa","senha_operador":"AC$2024op","cargo":"Operador Pleno","turno_id":1,"lor":"45968-CNEN"},
+{"operador_id":5,"nome_operador":"Carlos Mendes","senha_operador":"CM#2024op","cargo":"Supervisor Senior","turno_id":2,"lor":"36225-CNEN"},
+{"operador_id":6,"nome_operador":"Lucia Ferreira","senha_operador":"LF@2024op","cargo":"Operador Especialista","turno_id":3,"lor":"98856-CNEN"},
+{"operador_id":7,"nome_operador":"Roberto Almeida","senha_operador":"RA#2024op","cargo":"Operador Nuclear Senior","turno_id":1,"lor":"44598-CNEN"},
+{"operador_id":8,"nome_operador":"Amanda Santos","senha_operador":"AS@2024op","cargo":"Engenheira de Operações","turno_id":2,"lor":"32654-CNEN"},
+{"operador_id":9,"nome_operador":"Fernando Costa","senha_operador":"FC$2024op","cargo":"Supervisor de Turno","turno_id":3,"lor":"45698-CNEN"},
+{"operador_id":10,"nome_operador":"Patricia Lima","senha_operador":"PL%2024op","cargo":"Analista de Segurança Nuclear","turno_id":1,"lor":"32659-CNEN"},{"operador_id":11,"nome_operador":"Sara","senha_operador":"123","cargo":"Operadora","turno_id":1,"lor":"LOR123"},{"operador_id":20,"nome_operador":"Sara","senha_operador":"12345678","cargo":"Operador","turno_id":3,"lor":"74185-CNEN"},{"operador_id":22,"nome_operador":"Joao","senha_operador":"12345678","cargo":"Operador","turno_id":3,"lor":"LOR4321"}],
+
+
+"reatores":[
+{"reator_id":1,"nome_reator":"Reator Nuclear A1","pressao_max":1500,"temperatura_max":800,"radiacao_max":100,"fluxo_refrigeracao_max":2000,"tipo_reator_id":1,"loc_reator_id":1},{"reator_id":2,"nome_reator":"Reator PWR-Beta","pressao_max":1475,"temperatura_max":780,"radiacao_max":88,"fluxo_refrigeracao_max":1950,"tipo_reator_id":3,"loc_reator_id":3},{"reator_id":3,"nome_reator":"Reator BWR-Alpha","pressao_max":1650,"temperatura_max":850,"radiacao_max":95,"fluxo_refrigeracao_max":2200,"tipo_reator_id":2,"loc_reator_id":2}],
+
+
+"relatorios_turno":[
+{"relatorio_turno_id":1,"data_hora_relatorio":"2024-05-13T21:00:00","resumo_atividades":"Monitoramento de rotina dos parâmetros do reator","observacoes":"Todos os parâmetros dentro dos limites normais de operação","operador_id":1,"reator_id":1},
+{"relatorio_turno_id":2,"data_hora_relatorio":"2024-03-17T04:30:00","resumo_atividades":"Inspeção de rotina dos sistemas de segurança","observacoes":"Sistemas operando dentro dos parâmetros de segurança","operador_id":2,"reator_id":2},
+{"relatorio_turno_id":3,"data_hora_relatorio":"2024-03-17T16:45:00","resumo_atividades":"Calibração dos sensores de temperatura","observacoes":"Calibração realizada com sucesso, novos parâmetros ajustados","operador_id":3,"reator_id":3}],
+
+
+"status_notificacao":[
+{"status_notificacao_id":1,"descr_status":"Em análise pela equipe técnica"},
+{"status_notificacao_id":2,"descr_status":"Aguardando manutenção programada"},
+{"status_notificacao_id":3,"descr_status":"Procedimento de verificação concluído"}],
+
+
+"tipo_reator":[
+{"tipo_reator_id":1,"descricao_reator":"Reator de Água Pressurizada (PWR)","capacidade_energia":3200000000,"tecnologia":"PWR Generation III+","fabricante":"Westinghouse Electric"},{"tipo_reator_id":2,"descricao_reator":"Reator de Água Fervente (BWR)","capacidade_energia":2800000000,"tecnologia":"BWR Generation III","fabricante":"General Electric"},{"tipo_reator_id":3,"descricao_reator":"Reator de Nêutrons Rápidos","capacidade_energia":3500000000,"tecnologia":"FBR Generation IV","fabricante":"Rosatom"}],
+
+
+"turnos":[
+{"turno_id":1,"descricao_turno":"Manhã"},
+{"turno_id":2,"descricao_turno":"Tarde"},
+{"turno_id":3,"descricao_turno":"Noite"}]}
